@@ -1,0 +1,2739 @@
+ /* Change the background color and text color of the selected text */
+::selection {
+    background-color: #d0f0c0; /* Background color of the selected text */
+    color: #fffff0; /* Text color of the selected text */
+}
+
+/* For Mozilla Firefox */
+::-moz-selection {
+    background-color: #d0f0c0; /* Background color of the selected text */
+    color: #fffff0; /* Text color of the selected text */
+}
+
+ // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+
+@font-face {
+  font-family: 'Pencerio-Hairline';
+  src: url('../Fonts/Pencerio/Pencerio-Hairline.woff2') format('woff2'),
+       url('../Fonts/Pencerio/Pencerio-Hairline.woff') format('woff'),
+       url('../Fonts/Pencerio/Pencerio-Hairline.ttf') format('truetype');
+  font-weight: 50;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chillax-Light';
+  src: url('../Fonts/chillax/Chillax-Light.woff2') format('woff2'),
+       url('../Fonts/chillax/Chillax-Light.woff') format('woff'),
+       url('../Fonts/chillax/Chillax-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chillax-Regular';
+  src: url('../Fonts/chillax/Chillax-Regular.woff2') format('woff2'),
+       url('../Fonts/chillax/Chillax-Regular.woff') format('woff'),
+       url('../Fonts/chillax/Chillax-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chillax-Medium';
+  src: url('../Fonts/chillax/Chillax-Medium.woff2') format('woff2'),
+       url('../Fonts/chillax/Chillax-Medium.woff') format('woff'),
+       url('../Fonts/chillax/Chillax-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chillax-Semibold';
+  src: url('../Fonts/chillax/Chillax-Semibold.woff2') format('woff2'),
+       url('../Fonts/chillax/Chillax-Semibold.woff') format('woff'),
+       url('../Fonts/chillax/Chillax-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chillax-Bold';
+  src: url('../Fonts/chillax/Chillax-Bold.woff2') format('woff2'),
+       url('../Fonts/chillax/Chillax-Bold.woff') format('woff'),
+       url('../Fonts/chillax/Chillax-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 700.0;
+*
+* available axes:
+'wght' (range from 200.0 to 700.0
+*/
+@font-face {
+  font-family: 'Chillax-Variable';
+  src: url('../Fonts/chillax/Chillax-Variable.woff2') format('woff2'),
+       url('../Fonts/chillax/Chillax-Variable.woff') format('woff'),
+       url('../Fonts/chillax/Chillax-Variable.ttf') format('truetype');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bonny-Thin';
+  src: url('../Fonts/Bonny-Thin.woff2') format('woff2'),
+       url('../Fonts/Bonny-Thin.woff') format('woff'),
+       url('../Fonts/Bonny-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bonny-Light';
+  src: url('../Fonts/Bonny-Light.woff2') format('woff2'),
+       url('../Fonts/Bonny-Light.woff') format('woff'),
+       url('../Fonts/Bonny-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bonny-Regular';
+  src: url('../Fonts/bonny/Bonny-Regular.woff2') format('woff2'),
+       url('../Fonts/bonny/Bonny-Regular.woff') format('woff'),
+       url('../Fonts/bonny/Bonny-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bonny-Medium';
+  src: url('../Fonts/bonny/Bonny-Medium.woff2') format('woff2'),
+       url('../Fonts/bonny/Bonny-Medium.woff') format('woff'),
+       url('../Fonts/bonny/Bonny-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bonny-Bold';
+  src: url('../Fonts/bonny/Bonny-Bold.woff2') format('woff2'),
+       url('../Fonts/bonny/Bonny-Bold.woff') format('woff'),
+       url('../Fonts/bonny/Bonny-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 700.0;
+*
+* available axes:
+'wght' (range from 100.0 to 700.0
+*/
+@font-face {
+  font-family: 'Bonny-Variable';
+  src: url('../Fonts/bonny/Bonny-Variable.woff2') format('woff2'),
+       url('../Fonts/bonny/Bonny-Variable.woff') format('woff'),
+       url('../Fonts/bonny/Bonny-Variable.ttf') format('truetype');
+  font-weight: 100 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+.orbit-regular {
+  font-family: "Playfair", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+    padding: 0;
+}
+
+
+html, body {
+height: 100%;
+margin: 0;
+font-family: 'Courier New', Courier, monospace;
+line-height: 1.2;
+scroll-behavior: smooth;
+}
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+  
+
+}
+
+body img {
+
+     -webkit-filter: grayscale(100%); /* For Safari and older versions of Chrome */
+        -moz-filter: grayscale(100%);    /* For older versions of Firefox */
+        -ms-filter: grayscale(100%);    /* For older versions of Internet Explorer */
+        -o-filter: grayscale(100%);    /* For older versions of Opera */
+        filter: grayscale(100%); 
+
+
+}
+
+
+
+:root {
+    --background-color: black; 
+}
+
+#bgCanvas {
+    background-color: var(--background-color);
+}
+
+body.clava-tumulus-page,
+body.torrylin-tumulus-page,
+body.huly-hill-page,
+body.cairnpapple-page,
+body.göbekli-tepe-page,
+body.midas-page, 
+body.nemrud {
+    height: 100vh; 
+    margin: 0;
+    background-color: white;
+    overflow-y: scroll
+
+  
+
+
+    
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+
+
+
+/*body.clava-tumulus-page{
+
+     height: 100vh; 
+    margin: 0;
+    overflow: hidden;
+    background-color: #1a2421;
+}*/
+#title {
+    position: fixed;
+    left: 5%;
+    bottom: 71px;
+    transform: translateX(-50%); /* Center the element horizontally */
+    opacity: 0.8;
+    text-align: center; /* Center the text within the element */
+    width: 100%; /* Ensure the element takes the full width */
+    max-width: 100vw; /* Ensure it doesn't exceed the viewport width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+        #title p {
+            text-align: center;
+            font-family: "Bonny-Regular", serif;
+            color: black;
+            margin: 0;
+            font-size: 21px;
+            font-weight: 500; 
+        }
+
+
+
+#wish {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; /* Center the content horizontally */
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Smooth transition for opacity */
+    font-family: "Bonny-Regular", sans-serif;
+
+}
+
+#wish p {
+    font-size: 21px;
+    color: #F9F6EE;
+    font-family: "Bonny-Regular", sans-serif;
+    line-height: 2px;
+}
+
+@font-face {
+            font-family: 'Custom';
+            src: url('../Fonts/symbols/u1f400.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+@font-face {
+            font-family: 'Custom';
+            src: url('../Fonts/symbols/u10000.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+@font-face {
+
+
+font-family: 'FungalGrow0';
+src: url('../Webfonts/Fungal-Grow0Thickness500.woff2') format('woff2');
+src: url('../Webfonts/Fungal-Grow0Thickness500.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+
+
+font-family: 'FungalGrow1';
+src: url('../Webfonts/Fungal-Grow100Thickness500.woff2') format('woff2');
+src: url('../Webfonts/Fungal-Grow100Thickness500.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'FungalGrow2';
+src: url('../Webfonts/Fungal-Grow200Thickness500.woff2') format('woff2');
+src: url('../Webfonts/Fungal-Grow200Thickness500.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'FungalGrow3';
+src: url('../Webfonts/Fungal-Grow300Thickness500.woff2') format('woff2');
+src: url('../Webfonts/Fungal-Grow300Thickness500.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'FungalGrow4';
+src: url('../Webfonts/Fungal-Grow400Thickness500.woff2') format('woff2');
+src: url('../Webfonts/Fungal-Grow400Thickness500.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'FungalGrow5';
+src: url('../Webfonts/Fungal-Grow500Thickness500.woff2') format('woff2');
+src: url('../Webfonts/Fungal-Grow500Thickness500.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'FungalGrow6';
+src: url('../Webfonts/Fungal-Grow600Thickness500.woff2') format('woff2');
+src: url('../Webfonts/Fungal-Grow600Thickness500.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'FungalGrow7';
+src: url('../Webfonts/Fungal-Grow800Thickness500.woff2') format('woff2');
+src: url('../Webfonts/Fungal-Grow800Thickness500.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'FungalGrow8';
+src: url('../Webfonts/Fungal-Grow900Thickness1000.woff2') format('woff2');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'FungalGrow9';
+src: url('../Webfonts/Fungal-Grow1000Thickness1000.woff2') format('woff2');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+body {
+
+
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 100vh;
+margin: 0;
+font-size: 12px;
+line-height: 1;
+
+font-size: 8px;
+line-height: 1;
+overflow: hidden; 
+font-weight:  100;
+
+cursor: none;
+-webkit-font-smoothing: antialiased;
+}
+
+header {
+text-align: center;
+position: relative;
+height: 0px;
+}
+
+header h2 {
+position: absolute;
+top: 25;
+left: 0;
+right: 0;
+margin: 0;
+opacity: 0;
+animation: fontChange 35s linear 0s forwards;
+transition: opacity 2s ease-in-out;
+line-height: 1;
+letter-spacing: 0.5px;
+}
+
+@keyframes fontChange {
+0% {
+font-family: 'FungalGrow0', sans-serif;
+opacity: 0;
+}
+2% {
+font-family: 'FungalGrow0', sans-serif;
+opacity: 0.2;
+}
+4% {
+font-family: 'FungalGrow0', sans-serif;
+opacity: 0.4;
+}
+6% {
+font-family: 'FungalGrow0', sans-serif;
+opacity: 0.6;
+}
+8% {
+font-family: 'FungalGrow0', sans-serif;
+opacity: 0.8;
+}
+10% {
+font-family: 'FungalGrow0', sans-serif;
+opacity: 1;
+}
+11.43% {
+font-family: 'FungalGrow1', sans-serif;
+opacity: 1;
+}
+13.43% {
+font-family: 'FungalGrow1', sans-serif;
+opacity: 0.8;
+}
+15.43% {
+font-family: 'FungalGrow1', sans-serif;
+opacity: 0.6;
+}
+17.43% {
+font-family: 'FungalGrow1', sans-serif;
+opacity: 0.4;
+}
+19.43% {
+font-family: 'FungalGrow1', sans-serif;
+opacity: 0.2;
+}
+21.43% {
+font-family: 'FungalGrow1', sans-serif;
+opacity: 0;
+}
+22.86% {
+font-family: 'FungalGrow2', sans-serif;
+opacity: 0;
+}
+24.86% {
+font-family: 'FungalGrow2', sans-serif;
+opacity: 0.2;
+}
+26.86% {
+font-family: 'FungalGrow2', sans-serif;
+opacity: 0.4;
+}
+28.86% {
+font-family: 'FungalGrow2', sans-serif;
+opacity: 0.6;
+}
+30.86% {
+font-family: 'FungalGrow2', sans-serif;
+opacity: 0.8;
+}
+32.86% {
+font-family: 'FungalGrow2', sans-serif;
+opacity: 1;
+}
+34.29% {
+font-family: 'FungalGrow3', sans-serif;
+opacity: 1;
+}
+36.29% {
+font-family: 'FungalGrow3', sans-serif;
+opacity: 0.8;
+}
+38.29% {
+font-family: 'FungalGrow3', sans-serif;
+opacity: 0.6;
+}
+40.29% {
+font-family: 'FungalGrow3', sans-serif;
+opacity: 0.4;
+}
+42.29% {
+font-family: 'FungalGrow3', sans-serif;
+opacity: 0.2;
+}
+44.29% {
+font-family: 'FungalGrow3', sans-serif;
+opacity: 0;
+}
+45.71% {
+font-family: 'FungalGrow4', sans-serif;
+opacity: 0;
+}
+47.71% {
+font-family: 'FungalGrow4', sans-serif;
+opacity: 0.2;
+}
+49.71% {
+font-family: 'FungalGrow4', sans-serif;
+opacity: 0.4;
+}
+51.71% {
+font-family: 'FungalGrow4', sans-serif;
+opacity: 0.6;
+}
+53.71% {
+font-family: 'FungalGrow4', sans-serif;
+opacity: 0.8;
+}
+55.71% {
+font-family: 'FungalGrow4', sans-serif;
+opacity: 1;
+}
+57.14% {
+font-family: 'FungalGrow5', sans-serif;
+opacity: 1;
+}
+59.14% {
+font-family: 'FungalGrow5', sans-serif;
+opacity: 0.8;
+}
+61.14% {
+font-family: 'FungalGrow5', sans-serif;
+opacity: 0.6;
+}
+63.14% {
+font-family: 'FungalGrow5', sans-serif;
+opacity: 0.4;
+}
+65.14% {
+font-family: 'FungalGrow5', sans-serif;
+opacity: 0.2;
+}
+67.14% {
+font-family: 'FungalGrow5', sans-serif;
+opacity: 0;
+}
+68.57% {
+font-family: 'FungalGrow6', sans-serif;
+opacity: 0;
+}
+70.57% {
+font-family: 'FungalGrow6', sans-serif;
+opacity: 0.2;
+}
+72.57% {
+font-family: 'FungalGrow6', sans-serif;
+opacity: 0.4;
+}
+74.57% {
+font-family: 'FungalGrow6', sans-serif;
+opacity: 0.6;
+}
+76.57% {
+font-family: 'FungalGrow6', sans-serif;
+opacity: 0.8;
+}
+78.57% {
+font-family: 'FungalGrow6', sans-serif;
+opacity: 1;
+}
+80% {
+font-family: 'FungalGrow7', sans-serif;
+opacity: 1;
+}
+82% {
+font-family: 'FungalGrow7', sans-serif;
+opacity: 0.8;
+}
+84% {
+font-family: 'FungalGrow7', sans-serif;
+opacity: 0.6;
+}
+86% {
+font-family: 'FungalGrow7', sans-serif;
+opacity: 0.4;
+}
+88% {
+font-family: 'FungalGrow7', sans-serif;
+opacity: 0.2;
+}
+90% {
+font-family: 'FungalGrow7', sans-serif;
+opacity: 0;
+}
+91.43% {
+font-family: 'FungalGrow8', sans-serif;
+opacity: 0;
+}
+93.43% {
+font-family: 'FungalGrow8', sans-serif;
+opacity: 0.2;
+}
+95.43% {
+font-family: 'FungalGrow8', sans-serif;
+opacity: 0.4;
+}
+97.43% {
+font-family: 'FungalGrow8', sans-serif;
+opacity: 0.6;
+}
+99.43% {
+font-family: 'FungalGrow8', sans-serif;
+opacity: 0.8;
+}
+99.71% {
+font-family: 'FungalGrow9', sans-serif;
+opacity: 0;
+}
+99.86% {
+font-family: 'FungalGrow9', sans-serif;
+opacity: 0.2;
+}
+99.93% {
+font-family: 'FungalGrow9', sans-serif;
+opacity: 0.4;
+}
+99.96% {
+font-family: 'FungalGrow9', sans-serif;
+opacity: 0.6;
+}
+99.98% {
+font-family: 'FungalGrow9', sans-serif;
+opacity: 0.8;
+}
+100% {
+font-family: 'FungalGrow9', sans-serif;
+opacity: 1;
+}
+}
+header h2(1) { animation-delay: 0s; }
+header h2(2) { animation-delay: 4s; }
+header h2(3) { animation-delay: 8s; }
+header h2(4) { animation-delay: 12s; }
+header h2(5) { animation-delay: 16s; }
+header h2(6) { animation-delay: 20s; }
+header h2(7) { animation-delay: 24s; }
+header h2(8) { animation-delay: 28s; }
+header h2(9) { animation-delay: 32s; }
+
+#animation-container {
+
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#clava-gif {
+position: absolute;
+display: flex;
+justify-content: center;
+transform: scale(2.1);
+width: 100%;
+bottom: 250px;
+left: 150px;
+
+
+}
+
+#clava-gif video {
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+#torry-gif {
+position: absolute;
+display: flex;
+justify-content: center;
+transform: scale(2.1);
+width: 100%;
+bottom: 433px;
+left: 400px;
+
+
+}
+
+#torry-gif video {
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+#gif {
+display: flex;
+justify-content: center;
+width: 100%;
+height: 0vh; /* Adjust this value to control the height of the GIF container */
+margin-bottom: 0px; /* Adjust this value to control the space below the GIF */
+transition: left 0.1s ease-out, top 0.1s ease-out;
+}
+
+#gif img {
+position: absolute;
+transform: scale(0.5);
+pointer-events: none;
+z-index: 1000;
+}
+
+#flashlight {
+position: fixed;
+left: -100%;
+top: -100%;
+height: 300%;
+width: 300%;
+background: radial-gradient(circle at 50% 50%, rgba(242, 240, 223, 0.3) 1%, rgba(0, 0, 1, 0.001) 05%);
+filter: blur(25px);
+transition:
+left .5s ease-in-out,
+top .5s ease-in-out,
+height .5s ease-in-out,
+width .5s ease-in-out;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+#cursor {
+position: absolute;
+pointer-events: none;
+z-index: 11112; 
+transition: left 0.1s ease-out, top 0.1s ease-out; 
+overflow: auto;
+ transform: translate(-50%, -50%); /* Center the cursor */
+
+}
+
+
+#cursor img {
+    width: 66px; /* Adjust the size as needed */
+    height: 66px; /* Adjust the size as needed */
+   
+    opacity: 0.7;
+}
+
+#text-torrylin {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 300px;
+    height: 100vh;
+    margin-top: 0; /* Remove margin-top to allow dragging from the top */
+    height: auto; /* Allow the height to adjust automatically */
+    z-index: 1;
+    left: 50; /* Ensure it starts from the left */
+    opacity: 1;
+    margin-top: 5%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+
+#text-torrylin p{
+    font-family: "Bonny-Regular", serif;
+    font-size: 18px;
+    line-height: 1.5;
+
+}
+#center-torrylin:hover ~ #text-torrylin  {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+    
+}
+
+#text-huly-hill {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 300px;
+    height: 100vh;
+    margin-top: 0; /* Remove margin-top to allow dragging from the top */
+    height: auto; /* Allow the height to adjust automatically */
+    z-index: 1;
+    left: 2%; /* Ensure it starts from the left */
+    opacity: 1;
+    margin-top: 10%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+#text-huly-hill p{
+    font-family: "Bonny-Regular", serif;
+    font-size: 18px;
+    line-height: 1.5;   
+
+}
+#center-torrylin:hover ~ #text-huly-hill {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+    
+}
+
+#text-clava {
+    position: absolute;
+    display: block; /* Change to block to ensure it behaves like a scrollable container */
+    box-sizing: border-box;
+    text-align: center;
+    width: 300px;
+    height: auto; /* Allow the height to adjust automatically */
+    max-height: 400px; /* Set a maximum height for the div */
+    overflow-y: auto; /* Enable vertical scrolling */
+    z-index: 1;
+    top: 242px; /* Position from the top */
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    padding: 10px; /* Add some padding for better readability */
+    border: none; /* Remove the border */
+    scrollbar-width: thin; /* Thin scrollbar for Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* Scrollbar color for Firefox */
+}
+
+#text-clava::-webkit-scrollbar {
+    width: 5px; /* Thinner scrollbar */
+}
+
+#text-clava::-webkit-scrollbar-track {
+    background: transparent; /* Background of the scrollbar track */
+}
+
+#text-clava::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5); /* Color of the scrollbar thumb with opacity */
+    border-radius: 10px; /* Rounded edges for the scrollbar thumb */
+    border: 2px solid transparent; /* Add some space around the thumb */
+}
+
+#text-clava::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Color of the scrollbar thumb on hover with slightly higher opacity */
+}
+
+#text-clava p {
+    font-family: "Bonny-Regular", "Custom", serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0; /* Remove default margin for better spacing */
+    padding: 10px 0; /* Add some padding for better spacing */
+}
+
+
+#text-nemrud {
+    position: absolute;
+    display: block; /* Change to block to ensure it behaves like a scrollable container */
+    box-sizing: border-box;
+    text-align: center;
+    width: 300px;
+    height: auto; /* Allow the height to adjust automatically */
+    max-height: 400px; /* Set a maximum height for the div */
+    overflow-y: auto; /* Enable vertical scrolling */
+    z-index: 1;
+    top: 141px; /* Position from the top */
+    left: 10%;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    padding: 10px; /* Add some padding for better readability */
+    border: none; /* Remove the border */
+    scrollbar-width: thin; /* Thin scrollbar for Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* Scrollbar color for Firefox */
+}
+
+#text-nemrud::-webkit-scrollbar {
+    width: 5px; /* Thinner scrollbar */
+}
+
+#text-nemrud::-webkit-scrollbar-track {
+    background: transparent; /* Background of the scrollbar track */
+}
+
+#text-nemrud::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5); /* Color of the scrollbar thumb with opacity */
+    border-radius: 10px; /* Rounded edges for the scrollbar thumb */
+    border: 2px solid transparent; /* Add some space around the thumb */
+}
+
+#text-clava::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Color of the scrollbar thumb on hover with slightly higher opacity */
+}
+
+#text-nemrud p {
+    font-family: "Bonny-Regular", "Custom", serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0; 
+    padding: 10px 0;
+
+}
+
+#center-clava {
+    position: relative; /* Ensure the parent container is positioned relatively */
+    overflow: visible; /* Allow overflow to ensure the image is not cut off */
+
+}
+
+
+        #center-clava .TC1 {
+            position: relative; /* Ensure the link is positioned relatively */
+            cursor: none;
+            text-decoration: none;
+            color: pink;
+                 /* Change to pointer for better UX */
+            font-size: 24px;
+            position: relative; /* Ensure the image is positioned relative to the link */
+        }
+
+        #center-clava .TC1 img {
+            display: none; /* Hide the image initially */
+            position: absolute; /* Position the image absolutely within the link */
+            top: 0; /* Position from the top */
+            right: 50%; /* Position to the right of the link */
+            margin-left: 10px; /* Add some space between the link and the image */
+            width: 100px; /* Set the thumbnail size */
+            height: auto; /* Maintain aspect ratio */
+            transition: opacity 1s ease-in-out; /* Smooth transition for visibility */
+             z-index: 10000;         
+        }
+
+        #center-clava .TC1:hover img {
+            display: block; /* Show the image on hover */
+        }
+
+         #center-clava .TC1 video {
+            display: none; /* Hide the image initially */
+            position: absolute; /* Position the image absolutely within the link */
+            top: 0;
+            /* Position to the right of the link */
+            opacity: 0.9;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            transform: scale(1);
+            opacity: 1;  
+            border-radius: 20px 20px; 
+            transition: opacity 1s ease-in-out; /* Smooth transition for visibility */
+            z-index: 1001;
+        }
+
+        #center-clava .TC1:hover video {
+            display: block; /* Show the image on hover */
+        }
+
+
+ 
+
+#center-clava:hover ~ #text-clava {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+    
+}
+
+#text-cairnpapple-hill {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 300px;
+    height: auto; /* Allow the height to adjust automatically */
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    left: 10%;
+    
+    opacity: 1;
+    transition: opacity 2s ease-in-out; 
+}
+
+#text-cairnpapple-hill p{
+    font-family: "Bonny-Regular", serif;
+    font-size: 18px;
+    line-height: 1.5;   
+
+}
+#center-cairnpapple-hill:hover ~ #text-cairnpapple-hill {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+    
+}
+
+    #text-midas {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 300px;
+    height: auto; /* Allow the height to adjust automatically */
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    left: 60%; /* Center horizontally */
+    bottom: 50%; /* Center vertically */
+    transform: translate(50%, 50%); /* Adjust positioning */
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+
+#text-midas p{
+    font-family: "Bonny-Regular", serif;
+    font-size: 18px;
+    line-height: 1.5;   
+
+}
+
+#text-göbekli {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 300px;
+    height: auto; /* Allow the height to adjust automatically */
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    right: 10%; /* Position it 10% from the right edge */
+    transform: translateX(-10px); /* Fine-tune the positioning */
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+#text-göbekli p{
+    font-family: "Bonny-Regular", serif;
+    font-size: 18px;
+    line-height: 1.5;   
+
+}
+
+
+#center-torrylin {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    left: 15%;
+    top: 25; /* Align the element to the top of the page */
+    transition: opacity 2s ease-in-out;
+
+}
+
+#center-torrylin:hover ~ #text-torrylin {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    
+}
+
+
+#center-clava {
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+     left: 12%;
+    top: 15%;
+}
+
+#center-huly-hill {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    left: 5%;
+    top: 5%; /* Align the element to the top of the page */
+    transition: opacity 2s ease-in-out;
+
+}
+
+
+#center-huly-hill:hover ~ #text-huly-hill {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    
+}
+
+/*#center {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;  Adjust the width to 50% to take half of the viewport width 
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    left: 0; /* Align the element to the left side of the page 
+    top: 0; /* Align the element to the top of the page 
+    transition: opacity 2s ease-in-out;
+
+}*/
+
+    
+
+/* centered #center {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 0%;
+    top: -100px;
+}*/
+
+#center-torrylin video {
+    transition: opacity 2s ease-in-out;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transform: scale(1.6);
+    opacity: 0.8;
+    border-radius: 20px 20px;
+    
+}
+
+#center-clava video {
+    transition: opacity 2s ease-in-out;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transform: scale(1.6);
+    opacity: 0.8;
+    border-radius: 20px 20px;
+    
+}
+
+#center-huly-hill video {
+    transition: opacity 2s ease-in-out;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transform: scale(1.6);
+    opacity: 0.8;
+    border-radius: 20px 20px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.7);
+    
+}
+
+
+.blur-edges {
+
+   width: 378px;
+   height: 330px;
+   border: solid 50px #F9F6EE;
+   position: absolute;
+   box-sizing: border-box;
+   filter: blur(50px)
+   border-radius: 20px; /* Match the border-radius of the video */
+    box-sizing: border-box;
+    filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for better visibility */
+    z-index: 1; /* Ensure the blur-edges is above the video */
+    pointer-events: none; /* Ensure the blur-edges does not interfere with interactions */
+}
+
+.blur-edges-torrylin {
+
+   width: 378px;
+   height: 330px;
+   border: solid 50px #F9F6EE;
+   position: absolute;
+   box-sizing: border-box;
+   filter: blur(50px)
+   border-radius: 20px; /* Match the border-radius of the video */
+    box-sizing: border-box;
+    filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for better visibility */
+    z-index: 1; /* Ensure the blur-edges is above the video */
+    pointer-events: none; /* Ensure the blur-edges does not interfere with interactions */
+}
+
+.blur-edges-clava {
+
+   width: 378px;
+   height: 330px;
+   border: solid 50px #F9F6EE;
+   position: absolute;
+   box-sizing: border-box;
+   filter: blur(50px)
+   border-radius: 20px; /* Match the border-radius of the video */
+    box-sizing: border-box;
+    filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for better visibility */
+    z-index: 1; /* Ensure the blur-edges is above the video */
+    pointer-events: none; /* Ensure the blur-edges does not interfere with interactions */
+}
+
+.blur-edges-clava-left {
+
+   width: 270px;
+   height: 240px;
+   border: solid 50px #F9F6EE;
+   position: absolute;
+   box-sizing: border-box;
+   filter: blur(50px)
+   border-radius: 20px; /* Match the border-radius of the video */
+    box-sizing: border-box;
+    filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for better visibility */
+    z-index: 1; /* Ensure the blur-edges is above the video */
+    pointer-events: none; /* Ensure the blur-edges does not interfere with interactions */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.blur-edges-huly-hill {
+
+   width: 378px;
+   height: 330px;
+   border: solid 50px #F9F6EE;
+   position: absolute;
+   box-sizing: border-box;
+   filter: blur(50px)
+   border-radius: 20px; /* Match the border-radius of the video */
+    box-sizing: border-box;
+    filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for better visibility */
+    z-index: 1; /* Ensure the blur-edges is above the video */
+    pointer-events: none; /* Ensure the blur-edges does not interfere with interactions */
+}
+
+#left-video-clava {
+
+    position: absolute;
+    top: 10%;
+    left: 15%;
+
+}
+
+
+
+#left-video-clava video {
+
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transform: scale(1);
+    opacity: 0.8;  
+    border-radius: 20px 20px; 
+
+}
+
+.blur-edges-clava-right {
+
+ width: 270px;
+   height: 240px;
+   border: solid 50px #F9F6EE;
+   position: absolute;
+   box-sizing: border-box;
+   filter: blur(50px)
+   border-radius: 20px; /* Match the border-radius of the video */
+    box-sizing: border-box;
+    filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for better visibility */
+    z-index: 1; /* Ensure the blur-edges is above the video */
+    pointer-events: none; /* Ensure the blur-edges does not interfere with interactions */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+#right-video-clava {
+
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+
+}
+
+#right-video-clava video {
+
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transform: scale(1);
+    opacity: 0.8;   
+    border-radius: 20px 20px;
+
+}
+
+
+.drag {
+
+    transition: transform 0.3s linear;
+    
+}
+
+
+.stack-container {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%;
+    height: 100vh;
+}
+
+.stack-container img{
+
+
+}
+
+
+
+.stack-container-cairnpapple {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%;
+    height: 100vh;
+}
+
+
+.stack-container-göbekli {
+    display: flex;
+    justify-content: flex-start; /* Align items to the right */
+    width: 100%;
+    height: 100vh;
+     margin-left: 15%;
+}
+    .stack {
+
+        position: relative;
+        width: 300px;
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        align-items: center; /* Center images vertically */
+        justify-content: center; /* Center images horizontally */
+        perspective: 1000px;
+       /* margin: 0 auto;  Center the stack */
+       margin-right: 12%; 
+    }
+
+    .stack img {
+        
+        
+        max-width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0.7;
+        overflow: auto;
+        cursor: none;
+          
+    }
+
+    .stack img:nth-child(1) {
+    transform: translate(-51%, -55%) translateZ(50px) translateY(20px) rotate(-2deg) scale(1.09);
+    z-index: 10;
+}
+
+.stack img:nth-child(2) {
+    transform: translate(-50%, -50%) translateZ(40px) translateY(15px) rotate(3deg) scale(1.05);
+    z-index: 9;
+}
+
+.stack img:nth-child(3) {
+    transform: translate(-50%, -50%) translateZ(30px) translateY(10px) rotate(-1deg) scale(1.09);
+    z-index: 8;
+}
+
+.stack img:nth-child(4) {
+    transform: translate(-50%, -50%) translateZ(20px) translateY(5px) rotate(2deg) scale(1.02);
+    z-index: 7;
+}
+
+.stack img:nth-child(5) {
+    transform: translate(-50%, -55%) translateZ(10px) translateY(0px) rotate(-3deg) scale(1.09);
+    z-index: 6;
+}
+
+.stack img:nth-child(6) {
+    transform: translate(-50%, -50%) translateZ(0px) translateY(-5px) rotate(1deg) scale(1.09);
+    z-index: 5;
+}
+
+.stack img:nth-child(7) {
+    transform: translate(-55%, -50%) translateZ(-10px) translateY(-22px) rotate(-4deg) scale(1.01);
+    z-index: 4;
+}
+
+.stack img:nth-child(8) {
+    transform: translate(-50%, -50%) translateZ(-20px) translateY(-15px) rotate(2deg) scale(1.08);
+    z-index: 3;
+}
+
+.stack img:nth-child(9) {
+    transform: translate(-50%, -50%) translateZ(-30px) translateY(-20px) rotate(5deg) scale(1.13);
+    z-index: 2;
+}
+
+.stack img:nth-child(10) {
+    transform: translate(-50%, -55%) translateZ(-40px) translateY(-25px) rotate(-5deg) scale(1.11);
+    z-index: 1;
+}
+
+.stack img:nth-child(11) {
+    transform: translate(-50%, -50%) translateZ(-50px) translateY(-30px) rotate(6deg) scale(1.15);
+    z-index: 0;
+}
+
+.stack img:nth-child(12) {
+    transform: translate(-50%, -55%) translateZ(-60px) translateY(-35px) rotate(-6deg) scale(1.12);
+    z-index: -1;
+}
+
+.stack img:nth-child(13) {
+    transform: translate(-50%, -50%) translateZ(-70px) translateY(-40px) rotate(7deg) scale(1.17);
+    z-index: -2;
+}
+
+.stack img:nth-child(14) {
+    transform: translate(-50%, -50%) translateZ(-80px) translateY(-45px) rotate(-7deg) scale(1.14);
+    z-index: -3;
+}
+
+.stack img:nth-child(15) {
+    transform: translate(-50%, -55%) translateZ(-90px) translateY(-50px) rotate(8deg) scale(1.19);
+    z-index: -4;
+}
+
+.stack img:nth-child(16) {
+    transform: translate(-50%, -50%) translateZ(-100px) translateY(-55px) rotate(-8deg) scale(1.16);
+    z-index: -5;
+}
+
+.stack img:nth-child(17) {
+    transform: translate(-50%, -50%) translateZ(-110px) translateY(-60px) rotate(9deg) scale(1.21);
+    z-index: -6;
+}
+
+.stack img:nth-child(18) {
+    transform: translate(-50%, -55%) translateZ(-120px) translateY(-65px) rotate(-9deg) scale(1.18);
+    z-index: -7;
+}
+
+.stack img:nth-child(19) {
+    transform: translate(-50%, -50%) translateZ(-130px) translateY(-70px) rotate(10deg) scale(1.23);
+    z-index: -8;
+}
+
+.stack img:nth-child(20) {
+    transform: translate(-50%, -55%) translateZ(-140px) translateY(-75px) rotate(-10deg) scale(1.20);
+    z-index: -9;
+}
+
+.stack img:nth-child(21) {
+    transform: translate(-50%, -50%) translateZ(-150px) translateY(-80px) rotate(11deg) scale(1.25);
+    z-index: -10;
+}
+
+.stack img:nth-child(22) {
+    transform: translate(-50%, -55%) translateZ(-160px) translateY(-85px) rotate(-11deg) scale(1.22);
+    z-index: -11;
+}
+
+.stack img:nth-child(23) {
+    transform: translate(-50%, -50%) translateZ(-170px) translateY(-90px) rotate(12deg) scale(1.27);
+    z-index: -12;
+}
+
+.stack img:nth-child(24) {
+    transform: translate(-50%, -55%) translateZ(-180px) translateY(-95px) rotate(-12deg) scale(1.24);
+    z-index: -13;
+}
+
+.topbar {
+    position: fixed; /* Use fixed positioning to keep it at the top edge */
+    top: 0; /* Position it at the top edge of the viewport */
+    left: 0; /* Position it at the left edge of the viewport */
+    width: 100%; /* Make it span the full width of the viewport */
+    height: 125px; /* Set a fixed height for the top bar */
+    z-index: 999;
+      
+
+}
+
+.middle-topbar {
+
+}
+
+
+.stack-container-cairn {
+    position: fixed; /* Use fixed positioning to keep it at the left edge */
+    left: 0; /* Position it at the left edge of the viewport */
+    top: 5px; /* Position it at the top edge of the viewport */
+    width: 100%; /* Ensure it spans the full width of the viewport */
+    height: 111px; /* Set a fixed height for the container */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical overflow */
+    z-index: 9999;
+    scroll-behavior: smooth;
+      scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+
+.stack-container-cairn::-webkit-scrollbar {
+        display: none; /* WebKit browsers */
+    }
+   
+   .stack-container-topbar{
+    position: fixed; /* Use fixed positioning to keep it at the left edge */
+    left: 0; /* Position it at the left edge of the viewport */
+    top: 5px; /* Position it at the top edge of the viewport */
+    width: 100%; /* Ensure it spans the full width of the viewport */
+    height: 111px; /* Set a fixed height for the container */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical overflow */
+    z-index: 9999;
+    scroll-behavior: smooth;
+     -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    will-change: transform;
+    }
+
+    .stack-container-topbar-gob {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 5px;
+            width: 100%;
+            max-width: 951px;
+            height: 111px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            z-index: 9999;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+            will-change: transform;
+            background-color: #f0f0f0; /* Optional: Add a background color */
+            border: 1px solid #ccc; /* Optional: Add a border */
+        }
+
+.stack-container-topbar::-webkit-scrollbar {
+        display: none; /* WebKit browsers */
+    }
+    
+.stack-container-topbar a {
+
+    cursor: none;
+}
+
+.stack-container-topbar-gob::-webkit-scrollbar {
+        display: none; /* WebKit browsers */
+    }
+    
+.stack-container-topbar-gob a {
+
+    cursor: none;
+}
+.slides {
+    display: flex;
+    flex-direction: row; /* Arrange images in a row */
+    align-items: center;
+    width: max-content; /* Ensure the stack takes the full width of its content */
+
+}
+
+.slides img {
+    width: 150px; /* Set a fixed width for each image */
+    height: 125px; /* Set a fixed height for each image */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    
+    margin-right: 10px; /* Optional: Add some spacing between images */
+}
+
+
+
+#sidebar {
+    position: fixed; /* Use fixed positioning to keep it at the left edge */
+    left: 0; /* Position it at the left edge of the viewport */
+    top: 0; /* Position it at the top edge of the viewport */
+    width: 120px;
+    padding: 20px; /* Optional: Add padding for better spacing */
+    z-index: 1;
+       }
+
+.stack-container-midas {
+        position: fixed; /* Use fixed positioning to keep it at the left edge */
+        left: 0; /* Position it at the left edge of the viewport */
+        top: 0; /* Position it at the top edge of the viewport */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh; /* Ensure the content is tall enough to require scrolling */
+     max-height: 100vh; /* Ensure it doesn't exceed the viewport height */
+        overflow-y: auto;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+
+.stack-container-midas::-webkit-scrollbar {
+        display: none; /* WebKit browsers */
+    }
+
+#sidebar-huly {
+    position: fixed; /* Use fixed positioning to keep it at the right edge */
+    right: 0; /* Position it at the right edge of the viewport */
+    top: 0; /* Position it at the top edge of the viewport */
+    width: 200px;
+    padding: 20px; /* Optional: Add padding for better spacing */
+    z-index: 1;
+}
+
+.stack-container-huly {
+    position: fixed; /* Use fixed positioning to keep it at the right edge */
+    right: 0; /* Position it at the right edge of the viewport */
+    top: 0; /* Position it at the top edge of the viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Ensure the content is tall enough to require scrolling */
+     max-height: 100vh; /* Ensure it doesn't exceed the viewport height */
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.stack-container-huly::-webkit-scrollbar {
+    display: none; /* WebKit browsers */
+}
+
+    .roll {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dragon {
+        width: 120px;
+        height: auto;
+        margin-bottom: 10px;
+       
+        transition: transform 0.3s;
+    }
+
+    .dragon:hover {
+        transform: scale(1.07);
+    }
+
+/*
+#content-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.03);
+pointer-events: none;
+z-index: 998;
+}*/
+
+/*video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: -1;
+transform: scale(1.05);
+}*/
+
+.dot {
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  z-index: -1;
+   border-radius: 50%; /* Make the dot circular */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+  animation: shine 2s infinite;
+
+}
+
+#lightball {
+position: absolute;
+margin-top: -30%;  
+margin-right: 20%;
+cursor: pointer;
+}
+
+.floating {
+
+animation: float 123s infinite alternate;
+transition: transform 0.3s linear;
+}
+
+.floating1 {
+
+animation: float1 123s infinite alternate;
+transition: transform 0.3s linear;
+}
+
+.floating2 {
+
+animation: float2 123s infinite alternate;
+transition: transform 0.3s linear;
+}
+
+.floating-1 {
+
+position: absolute;
+top: 54%;
+left: 54%;
+}
+
+.floating-2 {
+
+
+}
+
+@keyframes float {
+0% {
+transform: translate(0, 0);
+}
+100% {
+transform: translate(11vw, 13vh);
+    }
+}
+
+@keyframes float1 {
+0% {
+transform: translate(0, 0);
+}
+100% {
+transform: translate(24vw, 12vh);
+    }
+}
+
+@keyframes float2 {
+0% {
+transform: translate(0, 0);
+}
+100% {
+transform: translate(21vw, 21vh);
+    }
+}
+
+ /*.lightball: after {
+content: "";
+width: 100%;
+height: 100%;
+position: absolute;
+}*/
+
+
+#blob {
+    
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(181, 176, 175  , 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    filter: blur(20px);
+    mix-blend-mode: ;
+    cursor: none;
+}
+canvas {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+pointer-events: none;
+}
+
+#moving {
+margin-left: 50%;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+/*background-color: #ffd369;*/
+position: absolute;
+top: 5px;
+left: 5px;
+cursor: pointer;
+animation: floatLeftToRight 50s linear infinite;
+box-shadow: inset 7px 6px 20px #ffe29c;
+opacity: 0.8;
+mix-blend-mode: hard-light ; /hard-light/
+border-radius: 100%;
+filter: drop-shadow(0 0 20px rgba(54, 69, 79, 0.7));
+cursor: pointer;
+
+}
+
+#dune svg {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the aspect ratio is maintained */
+}
+
+#dune {
+    position: fixed;
+    bottom: -120;
+    left: 0;
+    right: 0;
+    z-index: 1; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 0;
+}
+
+@media (max-width: 768px) {
+    #dune svg {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 0 auto; /* Center the SVG */
+    }
+    #dune {
+        bottom: -30px; /* Adjust this value for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #dune svg {
+        width: 80%; /* Further adjust width for very small screens */
+        margin: 0 auto; /* Center the SVG */
+    }
+    #dune {
+        bottom: -20px; /* Adjust this value for very small screens */
+    }
+}
+
+.stars  {
+
+    cursor: none;
+    z-index: 9999;
+    
+}
+.stars a, .starss a {
+
+    cursor: none;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+
+.stars img {
+
+    height: 32px;
+    width: 32px;
+}
+
+.starss img {
+
+    height: 256px;
+    width: 256px;
+}
+
+#star0 {
+position: absolute;
+top: 35%;
+left: 50%;
+z-index: 9999;
+opacity: 0.5;
+
+}
+
+#star1  {
+
+    position: absolute;
+    left: 20%;
+    top: 55%;
+    
+}
+
+
+#star1 svg {
+
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    animation: glow 6s infinite alternate;
+
+}
+
+#star1 p {
+
+    font-family: Bonny-Regular;
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+      transition: opacity 1s ease; 
+}
+
+#star1 a:hover + p {
+    opacity: 1;
+}
+
+@keyframes glow {
+            0% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+            }
+            100% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+        }
+
+#star2 {
+
+    position: absolute;
+    left: 47%;
+    top: 30%;
+    
+}
+
+#star2 svg {
+
+    width: 102px;
+    height: 102px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    animation: glow 6s infinite alternate;
+
+}
+
+#star2 p {
+
+    font-family: Bonny-Regular;
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+    transition: opacity 1s ease; 
+}
+
+#star2 a:hover + p {
+    opacity: 1;
+}
+
+@keyframes glow {
+            0% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+            }
+            100% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+        }
+
+
+
+#star3 {
+
+    position: absolute;
+    left: 74%;
+    top: 51%;
+    
+}
+
+#star3 svg {
+
+    width: 81px;
+    height: 81px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    animation: glow 6s infinite alternate;
+
+}
+
+#star3 p {
+
+    font-family: Bonny-Regular;
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+      transition: opacity 1s ease; 
+}
+
+#star3 a:hover + p {
+    opacity: 1;
+}
+
+@keyframes glow {
+            0% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+            }
+            100% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+        }
+
+
+#star4 {
+
+    position: absolute;
+    left: 6%;
+    top: 36%;
+    
+}
+
+#star4 svg {
+
+    width: 81px;
+    height: 81px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    animation: glow 6s infinite alternate;
+
+}
+
+#star4 p {
+
+    font-family: Bonny-Regular;
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+      transition: opacity 1s ease; 
+}
+
+#star4 a:hover + p {
+    opacity: 1;
+}
+
+@keyframes glow {
+            0% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+            }
+            100% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+        }
+
+
+#star5 {
+
+    position: absolute;
+    left: 32%;
+    top: 12%;
+    
+}
+
+#star5 svg {
+
+    width: 75px;
+    height: 75px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    animation: glow 6s infinite alternate;
+
+}
+
+#star5 p {
+
+    font-family: Bonny-Regular;
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+      transition: opacity 1s ease; 
+}
+
+#star5 a:hover + p {
+    opacity: 1;
+}
+
+@keyframes glow {
+            0% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+            }
+            100% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+        }
+
+
+#star6 {
+
+    position: absolute;
+    left: 68%;
+    top: 15%;
+    
+}
+
+#star6 svg {
+
+    width: 45px;
+    height: 45px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    animation: glow 6s infinite alternate;
+
+}
+#star6 p {
+
+    font-family: Bonny-Regular;
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+      transition: opacity 1s ease; 
+}
+
+#star6 a:hover + p {
+    opacity: 1;
+}
+
+@keyframes glow {
+            0% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+            }
+            100% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+        }
+
+
+#star7 {
+
+    position: absolute;
+    left: 84%;
+    top: 30%;
+    
+}
+
+#star7 svg {
+
+    width: 66px;
+    height: 66px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    animation: glow 6s infinite alternate;
+
+}
+
+#star7 p {
+
+    font-family: Bonny-Regular;
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+      transition: opacity 1s ease; 
+}
+
+#star7 a:hover + p {
+    opacity: 1;
+}
+
+@keyframes glow {
+            0% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+            }
+            100% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+        }
+
+
+
+
+#T1 {
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    width: 99px;
+    height: 125px;
+    background: radial-gradient(circle, rgba(233, 220, 201, 0.3) 0%, rgba(255, 229, 180, 0) 70%);
+    border-radius: 5%;
+    filter: blur(15px);
+    mix-blend-mode: ;
+    cursor: none;
+}
+
+#T2 {
+    position: absolute;
+    top: 55%;
+    left: 48%;
+    width: 125px;
+    height: 125px;
+    background: radial-gradient(circle, rgba(233, 220, 201, 0.3) 0%, rgba(255, 229, 180, 0) 70%);
+    border-radius: 5%;
+    filter: blur(15px);
+    mix-blend-mode: ;
+    cursor: none;
+}
+
+#T3 {
+    position: absolute;
+    bottom: 42%;
+    top: 10%;
+    left: 66%;
+    width: 111px;
+    height: 125px;
+    background: radial-gradient(circle, rgba(233, 220, 201, 0.3) 0%, rgba(255, 229, 180, 0) 70%);
+    border-radius: 5%;
+    filter: blur(15px);
+    mix-blend-mode: ;
+    cursor: none;
+}
+
+#T3-1 {
+    position: fixed; /* Change to fixed positioning */
+    top: 25px; /* Adjust the distance from the top */
+    right: 25px; /* Adjust the distance from the right */
+    width: 111px;
+    height: 125px;
+    background: radial-gradient(circle, rgba(233, 220, 201, 0.3) 0%, rgba(255, 229, 180, 0) 70%);
+    border-radius: 5%;
+    filter: blur(15px);
+    mix-blend-mode: ;
+    cursor: none;
+    z-index: 0;
+}
+
+#T3-2 {
+    position: fixed; /* Change to fixed positioning */
+    top: 25px; /* Adjust the distance from the top */
+    right: 200px; /* Adjust the distance from the right */
+    width: 111px;
+    height: 125px;
+    background: radial-gradient(circle, rgba(233, 220, 201, 0.3) 0%, rgba(255, 229, 180, 0) 70%);
+    border-radius: 5%;
+    filter: blur(15px);
+    mix-blend-mode: ;
+    cursor: none;
+    z-index: 0;
+}   
+
+
+
+#T4 {
+    position: absolute;
+    bottom: 21%;
+    right: 12%;
+    width: 125px;
+    height: 125px;
+    background: radial-gradient(circle, rgba(233, 220, 201, 0.3) 0%, rgba(255, 229, 180, 0) 70%);
+    border-radius: 5%;
+    filter: blur(15px);
+    mix-blend-mode: ;
+    cursor: none;
+}
+
+#T5 {
+    position: absolute;    
+    width: 111px;
+    height: 133px;
+    background: radial-gradient(circle, rgba(233, 220, 201, 0.3) 0%, rgba(255, 229, 180, 0) 70%);
+    border-radius: 5%;
+    filter: blur(15px);
+    mix-blend-mode: ;
+    z-index: 111111;
+}
+
+#T6 {
+    position: absolute;
+    top: 5%;
+    left: 11%;
+    width: 111px;
+    height: 133px;
+    background: radial-gradient(circle, rgba(233, 220, 201, 0.3) 0%, rgba(255, 229, 180, 0) 70%);
+    border-radius: 5%;
+    filter: blur(15px);
+    mix-blend-mode:;
+    cursor: none;
+}
+
+#T7 {
+    
+    width: 44px;
+    height: 66px;
+    background: radial-gradient(circle, rgba(233, 220, 201, 0.3) 0%, rgba(255, 229, 180, 0) 70%);
+    border-radius: 5%;
+    filter: blur(8px);
+    mix-blend-mode:;
+    cursor: none;
+}
+
+#T7-1 {
+    
+    width: 111px;
+    height: 133px;
+    background: radial-gradient(circle, rgba(233, 220, 201, 0.3) 0%, rgba(255, 229, 180, 0) 70%);
+    border-radius: 5%;
+    filter: blur(15px);
+    mix-blend-mode:;
+    cursor: none;
+
+}
+
+#tumulus1 {
+
+    z-index: 11111;
+    cursor: none;
+
+}
+
+#tumulus1 a {
+    width: 77px;
+    height: 88px;
+    cursor: none;
+    text-decoration: none;
+
+}
+
+#tumulus1 p {
+
+    font-family: Bonny-Regular;
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+    transition: opacity 1s ease; 
+      margin-top: -20px; /* Adjust this value to position the text higher */
+    text-align: center;
+    pointer-events: none; /* Ensure the text does not interfere with clicking */
+}
+
+#tumulus1 a:hover + p {
+    opacity: 1;
+}
+
+
+    .return {
+    position: fixed;
+    bottom: 0px;
+    left: 5%;
+    transform: translateX(-50%); /* Center the element horizontally */
+    opacity: 0.9;
+    text-align: center; /* Center the text within the element */
+    width: 100%; /* Ensure the element takes the full width */
+    max-width: 100vw; /* Ensure it doesn't exceed the viewport width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-left: 0; /* Remove the margin-left to ensure proper centering */
+}
+
+.return1 {
+
+    position: fixed;
+    bottom: 10px; 
+    left: 200px; 
+    opacity: 0.7;
+}
+
+#flying-object {
+
+position: fixed;
+width: 100vw;
+height: 100vh;
+z-index: 99999;
+cursor: none;
+pointer-events: none;
+
+}
+
+#flying-object .F1 {
+
+    position: absolute;
+    left: 10%;
+}
+
+#flying-object .F2 {
+
+position: absolute;
+    right: 35%;
+    top:  45%;
+    z-index: 1;
+}
+
+#flying-object .F3 {
+
+position: absolute;
+top: 5%;
+left: 35%;
+    
+}
+
+#flying-object .F4 {
+
+position: absolute;
+top: 50%;
+left: 21%;
+    
+}
+
+.F1 img {
+    width: 145.1px;
+    height: 200px;
+  
+    transform: scale(0.6);
+    opacity: 0.9;
+}
+
+  .F2 img {
+    width: 188.75px;
+    height: 200px;
+   
+    transform: scale(0.6);
+    opacity: 0.9;
+}
+
+.F3 img {
+    width: 131px;
+    height: 200px;
+     
+   transform: scale(0.6);
+   opacity: 0.9;
+}
+
+.F4 img {
+     width: 125.5px;
+    height: 200px;
+     transform: scale(0.6);
+    transform-origin: left;
+    opacity: 0.9;
+
+}
+
+#asc0 {
+    position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
+    top: 9%;             /* Places the div at the very top of its containing element */
+    left: 0;            /* Optional: Aligns it to the left edge */
+    right: 0;           /* Optional: Stretches it to the right edge */
+    margin: 0;          /* Removes any default margin */
+    padding: 0;         /* Optional: Removes padding if needed */
+    width: 100%;   
+    display: flex;      /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 120vh;   
+     font-family: 'Courier New', Courier, monospace;
+         -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000
+}
+
+#asc0 span {
+            
+
+           
+    font-size: 0.9vw; /* Use viewport width for responsive font size */
+    text-shadow: 0 0 10px rgba(2, 48, 32, 0.9);
+    white-space: pre-wrap; /* Allow wrapping of text */
+    word-break: break-all; /* Break words if necessary */
+    line-height: 1;
+     max-width: 100%; 
+     overflow: hidden;
+  
+
+}
+
+@media (max-width: 1200px) {
+    #asc0 span {
+        font-size: 0.60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #asc0 span {
+        font-size: 0.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #asc0 span {
+        font-size: 2.1vw;
+    }
+}
+
+#asc1 {
+    position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
+    top: 12%;             /* Places the div at the very top of its containing element */
+    left: 0;            /* Optional: Aligns it to the left edge */
+    right: 0;           /* Optional: Stretches it to the right edge */
+    margin: 0;          /* Removes any default margin */
+    padding: 0;         /* Optional: Removes padding if needed */
+    width: 100%;   
+    display: flex;      /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 120vh;   
+     font-family: 'Courier New', Courier, monospace;
+         -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000
+}
+
+#asc1 span {
+            
+
+           
+    font-size: 0.9vw; /* Use viewport width for responsive font size */
+    text-shadow: 0 0 10px rgba(2, 48, 32, 0.9);
+    white-space: pre-wrap; /* Allow wrapping of text */
+    word-break: break-all; /* Break words if necessary */
+    line-height: 1;
+     max-width: 100%; 
+     overflow: hidden;
+  
+
+}
+
+@media (max-width: 1200px) {
+    #asc1 span {
+        font-size: 0.60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #asc1 span {
+        font-size: 0.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #asc1 span {
+        font-size: 2.1vw;
+    }
+}
+
+
+ #center-clava .TC1 {
+            position: relative; /* Ensure the link is positioned relatively */
+            cursor: none;
+            text-decoration: none;
+            color: pink;
+                 /* Change to pointer for better UX */
+            font-size: 24px;
+            position: relative; /* Ensure the image is positioned relative to the link */
+        }
+
+  #asc1 .ii .clavamage1{
+
+    text-decoration: none;
+    color: #7CFC00;
+    /*color: #00A36C;*/
+    cursor: pointer;
+
+  }      
+
+#asc1 .ii .clavamage1 img {
+    display: none; /* Hide the image initially */
+    position: absolute; /* Position the image absolutely within the link */
+    
+    right: 50%; /* Position to the right of the link */
+    margin-left: 10px; /* Add some space between the link and the image */
+    width: 250px; /* Set the thumbnail size */
+    height: auto; /* Maintain aspect ratio */
+    transition: opacity 3s ease-in-out; /* Smooth transition for visibility */
+    z-index: 10000;
+}
+
+#asc1 .ii .clavamage1:hover img {
+    display: block; /* Show the image on hover */
+    opacity: 1; /* Ensure the image is fully visible */
+}
+
+.cairn-video {
+    position: absolute; /* Position the video on top */
+    bottom: 10%; /* Align to the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+  pointer-events: none;
+
+
+}
+
+
+
+/*****/
+
+#asc11 {
+    position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
+    top: 12%;             /* Places the div at the very top of its containing element */
+    left: 0;            /* Optional: Aligns it to the left edge */
+    right: 0;           /* Optional: Stretches it to the right edge */
+    margin: 0;          /* Removes any default margin */
+    padding: 0;         /* Optional: Removes padding if needed */
+    width: 100%;   
+    display: flex;      /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 200vh; 
+     font-family: 'Courier New', Courier, monospace;
+         -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+     overflow: auto;
+}
+
+.asc11 iframe {
+    height: 100vh; 
+    width: 100%; /* Adjust the width as needed */
+    max-width: 800px; /* Maximum width for the video */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 16 / 9; /* 16:9 aspect ratio */
+}
+
+.iii {
+    display: block; /* Ensure the span behaves as a block element */
+    margin-bottom: 550px;
+
+}
+
+#asc11 span {
+            
+    font-size: 0.9vw; /* Use viewport width for responsive font size */
+    text-shadow: 0 0 10px rgba(2, 48, 32, 0.9);
+    white-space: pre-wrap; /* Allow wrapping of text */
+    word-break: break-all; /* Break words if necessary */
+    line-height: 1;
+     max-width: 100%; 
+     overflow: hidden;
+  
+
+}
+
+@media (max-width: 1200px) {
+    #asc11 span {
+        font-size: 0.60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #asc11 span {
+        font-size: 0.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #asc11 span {
+        font-size: 2.1vw;
+    }
+}
+
+
+ #center-clava .TC1 {
+            position: relative; /* Ensure the link is positioned relatively */
+            cursor: none;
+            text-decoration: none;
+            color: pink;
+                 /* Change to pointer for better UX */
+            font-size: 24px;
+            position: relative; /* Ensure the image is positioned relative to the link */
+        }
+
+  #asc11 .iii .clavamage1{
+
+    text-decoration: none;
+    color: #7CFC00;
+    /*color: #00A36C;*/
+    cursor: pointer;
+
+  }      
+
+#asc1 .iii .clavamage1 img {
+    display: none; /* Hide the image initially */
+    position: absolute; /* Position the image absolutely within the link */
+    
+    right: 50%; /* Position to the right of the link */
+    margin-left: 10px; /* Add some space between the link and the image */
+    width: 250px; /* Set the thumbnail size */
+    height: auto; /* Maintain aspect ratio */
+    transition: opacity 3s ease-in-out; /* Smooth transition for visibility */
+    z-index: 10000;
+}
+
+#asc1 .iii .clavamage1:hover img {
+    display: block; /* Show the image on hover */
+    opacity: 1; /* Ensure the image is fully visible */
+}
+
+
+
