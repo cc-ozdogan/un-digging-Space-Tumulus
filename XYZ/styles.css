@@ -1107,6 +1107,7 @@ overflow: auto;
 }
 
 #center-huly-hill {
+    
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -1115,9 +1116,10 @@ overflow: auto;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    left: 5%;
-    top: 5%; /* Align the element to the top of the page */
+    left: 120px;
+    top: 100px; /* Align the element to the top of the page */
     transition: opacity 2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.0);
 
 }
 
@@ -1186,14 +1188,13 @@ overflow: auto;
 
 #center-huly-hill video {
     transition: opacity 2s ease-in-out;
-    width: 200px;
-    height: 200px;
+    
     object-fit: contain;
-    transform: scale(1.6);
+    transform: scale(2.4);
     opacity: 0.8;
     border-radius: 20px 20px;
-    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.7);
-    
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.7);
+   
 }
 
 
