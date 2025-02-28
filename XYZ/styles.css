@@ -215,7 +215,7 @@ body.nemrud {
     height: 100vh; 
     margin: 0;
     background-color: white;
-    overflow-y: scroll
+    overflow-y: scroll; 
 
   
 
@@ -1102,8 +1102,8 @@ overflow: auto;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-     left: 12%;
-    top: 15%;
+    right: 300px;
+    top: 300px;
 }
 
 #center-huly-hill {
@@ -1119,7 +1119,7 @@ overflow: auto;
     left: 120px;
     top: 100px; /* Align the element to the top of the page */
     transition: opacity 2s ease-in-out;
-    background-color: rgba(255, 255, 255, 0.0);
+   
 
 }
 
@@ -1177,12 +1177,12 @@ overflow: auto;
 
 #center-clava video {
     transition: opacity 2s ease-in-out;
-    width: 200px;
-    height: 200px;
+   
     object-fit: contain;
-    transform: scale(1.6);
+    transform: scale(2.4);
     opacity: 0.8;
     border-radius: 20px 20px;
+    box-shadow: 50px 10px 32px rgba(0, 0, 0, 0.7);
     
 }
 
@@ -1749,7 +1749,7 @@ animation: float 123s infinite alternate;
 transition: transform 0.3s linear;
 }
 
-.floating1 {
+.floating1 {        
 
 animation: float1 123s infinite alternate;
 transition: transform 0.3s linear;
