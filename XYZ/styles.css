@@ -1591,8 +1591,7 @@ overflow: auto;
             scrollbar-width: none; /* Firefox */
             -ms-overflow-style: none; /* Internet Explorer 10+ */
             will-change: transform;
-            background-color: #f0f0f0; /* Optional: Add a background color */
-            border: 1px solid #ccc; /* Optional: Add a border */
+           
         }
 
 .stack-container-topbar::-webkit-scrollbar {
