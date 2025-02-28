@@ -702,17 +702,20 @@ left: 150px;
 position: absolute;
 display: flex;
 justify-content: center;
-transform: scale(2.1);
+
 width: 100%;
 bottom: 433px;
 left: 400px;
+
 
 
 }
 
 #torry-gif video {
 
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    box-shadow: 22px 17px 30px rgba(0, 0, 0, 0.7);
+    border-radius: 20px 20px;
+    transform: scale(2.4);
 }
 
 #gif {
