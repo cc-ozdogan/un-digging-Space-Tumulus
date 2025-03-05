@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const spans = document.querySelectorAll('.clavamage1');
     const container = document.querySelector('.stack-container-cairn, .stack-container-clava, .stack-container-topbar');
     const stackContainerTopbar = document.querySelector('.stack-container-topbar');
-
+    
+    
     let clickCount = 0;
 
     let targetX = 0;
@@ -32,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
     ////lightbox
 
     ///cursor 
+
+
 
     // Smooth cursor movement using requestAnimationFrame
     function updateCursorPosition() {
@@ -584,4 +587,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // No need to manually adjust here since updateCursorPosition already accounts for scroll
     });
     }
+
+
 });
