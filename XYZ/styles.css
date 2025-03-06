@@ -989,6 +989,9 @@ overflow: auto;
     
 }
 
+
+
+
 #text-cairnpapple-hill {
     position: absolute;
     display: flex;
@@ -1106,7 +1109,7 @@ overflow: auto;
     justify-content: center;
     box-sizing: border-box;
     right: 300px;
-    top: 300px;
+    top: 150px;
 }
 
 #center-huly-hill {
