@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const stackContainerMida = document.querySelector('.stack-container-mida');
     const stackContainerClava = document.querySelector('.stack-container-clava');
     const spans = document.querySelectorAll('.clavamage1');
-    const container = document.querySelector('.stack-container-cairn, .stack-container-clava, .stack-container-topbar, .stack-container-topbar-gob');
-    const stackContainerTopbar = document.querySelector('.stack-container-topbar, .stack-container-topbar-gob');
+    const container = document.querySelector('.stack-container-cairn, .stack-container-clava, .stack-container-topbar, .stack-container-topbar-gob, .stack-container-huly');
+    const stackContainerTopbar = document.querySelector('.stack-container-topbar, .stack-container-topbar-gob, .stack-container-huly');
     
     
     let clickCount = 0;
