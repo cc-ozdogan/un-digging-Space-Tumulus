@@ -1532,7 +1532,7 @@ overflow: auto;
 }
 
 .topbar {
-    position: fixed; /* Use fixed positioning to keep it at the top edge */
+    position: absolute; /* Use fixed positioning to keep it at the top edge */
     top: 0; /* Position it at the top edge of the viewport */
     left: 0; /* Position it at the left edge of the viewport */
     width: 100%; /* Make it span the full width of the viewport */
@@ -1566,7 +1566,7 @@ overflow: auto;
     }
    
    .stack-container-topbar{
-    position: fixed; /* Use fixed positioning to keep it at the left edge */
+    position: absolute; /* Use fixed positioning to keep it at the left edge */
     left: 0; /* Position it at the left edge of the viewport */
     top: 5px; /* Position it at the top edge of the viewport */
     width: 100%; /* Ensure it spans the full width of the viewport */
@@ -1582,7 +1582,7 @@ overflow: auto;
     }
 
     .stack-container-topbar-gob {
-            position: fixed;
+            position: absolute;
             left: 50%;
             transform: translateX(-50%);
             top: 5px;
