@@ -933,8 +933,24 @@ overflow: auto;
 
 }
 
+#center-clava-b {
+    position: relative; /* Ensure the parent container is positioned relatively */
+    overflow: visible; /* Allow overflow to ensure the image is not cut off */
+
+}
+
 
         #center-clava .TC1 {
+            position: relative; /* Ensure the link is positioned relatively */
+            cursor: none;
+            text-decoration: none;
+            color: pink;
+                 /* Change to pointer for better UX */
+            font-size: 24px;
+            position: relative; /* Ensure the image is positioned relative to the link */
+        }
+
+        #center-clava-b .TC1 {
             position: relative; /* Ensure the link is positioned relatively */
             cursor: none;
             text-decoration: none;
@@ -984,6 +1000,51 @@ overflow: auto;
  
 
 #center-clava:hover ~ #text-clava {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+    
+}
+
+ #center-clava-b .TC1 img {
+            display: none; /* Hide the image initially */
+            position: absolute; /* Position the image absolutely within the link */
+            top: 0; /* Position from the top */
+            right: 50%; /* Position to the right of the link */
+            margin-left: 10px; /* Add some space between the link and the image */
+            width: 100px; /* Set the thumbnail size */
+            height: auto; /* Maintain aspect ratio */
+            transition: opacity 1s ease-in-out; /* Smooth transition for visibility */
+             z-index: 10000;         
+        }
+
+        #center-clava-b .TC1:hover img {
+            display: block; /* Show the image on hover */
+        }
+
+         #center-clava-b .TC1 video {
+            display: none; /* Hide the image initially */
+            position: absolute; /* Position the image absolutely within the link */
+            top: 0;
+            /* Position to the right of the link */
+            opacity: 0.9;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            transform: scale(1);
+            opacity: 1;  
+            border-radius: 20px 20px; 
+            transition: opacity 1s ease-in-out; /* Smooth transition for visibility */
+            z-index: 1001;
+        }
+
+        #center-clava-b .TC1:hover video {
+            display: block; /* Show the image on hover */
+        }
+
+
+ 
+
+#center-clava-b:hover ~ #text-clava {
     opacity: 1;
     transition: opacity 3s ease-in-out;
     
@@ -1108,9 +1169,22 @@ overflow: auto;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    right: 300px;
+    right: 8%;
     top: 300px;
 }
+
+#center-clava-b {
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    right: 25%;
+    top: 300px;
+}
+
 
 #center-huly-hill {
     
@@ -1188,7 +1262,18 @@ overflow: auto;
     transform: scale(2.4);
     opacity: 0.8;
     border-radius: 20px 20px;
-    box-shadow: 50px 10px 32px rgba(0, 0, 0, 0.7);
+    box-shadow: -20px 10px 32px rgba(0, 0, 0, 0.7);
+    
+}
+
+#center-clava-b video {
+    transition: opacity 2s ease-in-out;
+   
+    object-fit: contain;
+    transform: scale(2.4);
+    opacity: 0.8;
+    border-radius: 20px 20px;
+    box-shadow: -20px 10px 32px rgba(0, 0, 0, 0.7);
     
 }
 
@@ -2602,7 +2687,15 @@ left: 21%;
             font-size: 24px;
             position: relative; /* Ensure the image is positioned relative to the link */
         }
-
+#center-clava-b .TC1 {
+            position: relative; /* Ensure the link is positioned relatively */
+            cursor: none;
+            text-decoration: none;
+            color: pink;
+                 /* Change to pointer for better UX */
+            font-size: 24px;
+            position: relative; /* Ensure the image is positioned relative to the link */
+        }
   #asc1 .ii .clavamage1{
 
     text-decoration: none;
@@ -2709,6 +2802,16 @@ left: 21%;
 
 
  #center-clava .TC1 {
+            position: relative; /* Ensure the link is positioned relatively */
+            cursor: none;
+            text-decoration: none;
+            color: pink;
+                 /* Change to pointer for better UX */
+            font-size: 24px;
+            position: relative; /* Ensure the image is positioned relative to the link */
+        }
+
+ #center-clava-b .TC1 {
             position: relative; /* Ensure the link is positioned relatively */
             cursor: none;
             text-decoration: none;
