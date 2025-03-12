@@ -969,7 +969,11 @@ overflow: auto;
     position: relative; /* Ensure the parent container is positioned relatively */
     overflow: visible; /* Allow overflow to ensure the image is not cut off */
 
+    z-index: 9999999;
+    
 }
+
+
 
 
         #center-clava .TC1 {
@@ -1215,6 +1219,8 @@ overflow: auto;
     box-sizing: border-box;
     right: 25%;
     top: 300px;
+    background-color: white; /* White background */
+    border-radius: 50%; /* Make it round */
 }
 
 
@@ -2723,6 +2729,56 @@ left: 21%;
 }
 
 
+#asc3 {
+    position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
+    top: 0;             /* Places the div at the very top of its containing element */
+    left: 0;            /* Optional: Aligns it to the left edge */
+    right: 0;           /* Optional: Stretches it to the right edge */
+    margin: 0;          /* Removes any default margin */
+    padding: 0;         /* Optional: Removes padding if needed */
+    width: 100%;   
+    display: flex;      /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;   
+     font-family: 'Courier New', Courier, monospace;
+         -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000
+}
+
+#asc3 span {
+            
+
+           
+    font-size: 0.9vw; /* Use viewport width for responsive font size */
+    text-shadow: 0 0 10px rgba(2, 48, 32, 0.9);
+    white-space: pre-wrap; /* Allow wrapping of text */
+    word-break: break-all; /* Break words if necessary */
+    line-height: 1;
+     max-width: 100%; 
+     overflow: hidden;
+  
+
+}
+
+@media (max-width: 1200px) {
+    #asc3 span {
+        font-size: 0.60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #asc3 span {
+        font-size: 0.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #asc3 span {
+        font-size: 2.1vw;
+    }
+}
+
  #center-clava .TC1 {
             position: relative; /* Ensure the link is positioned relatively */
             cursor: none;
@@ -2748,7 +2804,9 @@ left: 21%;
     /*color: #00A36C;*/
     cursor: pointer;
 
-  }      
+  }  
+
+
 
 #asc1 .ii .clavamage1 img {
     display: none; /* Hide the image initially */
