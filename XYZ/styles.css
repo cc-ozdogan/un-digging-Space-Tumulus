@@ -2017,6 +2017,40 @@ cursor: pointer;
     #dune {
         bottom: -20px; /* Adjust this value for very small screens */
     }
+
+    #title {
+    position: fixed;
+    left: 15%;
+    max-width: 40vw; /* Ensure it doesn't exceed the viewport width */
+    
+}
+
+        #title p {
+            text-align: center;
+            
+        }
+
+
+    #title-index {
+    
+    left: 50%;
+    top: 15px;
+    
+}
+
+    
+    #tumulus1 .return {
+    position: fixed;
+    bottom: 0px;
+    left: 10%;
+    
+    text-align: left; /* Center the text within the element */
+    width: 100%; /* Ensure the element takes the full width */
+    max-width: 40vw; /* Ensure it doesn't exceed the viewport width */
+   
+}  
+
+
 }
 
 .stars  {
