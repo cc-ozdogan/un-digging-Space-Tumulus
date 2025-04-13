@@ -14,6 +14,14 @@
 // <weight>: Use a value from 400 to 900
 
 @font-face {
+  font-family: 'Desirable Calligraphy';
+  src: url('../Fonts/desirable/DesirableCalligraphy.woff2') format('woff2'),
+   url('../Fonts/desirable/DesirableCalligraphy.woff') format('woff'),
+       url('../Fonts/desirable/DesirableCalligraphy.ttf') format('truetype');
+       
+}
+
+@font-face {
   font-family: 'Pencerio-Hairline';
   src: url('../Fonts/Pencerio/Pencerio-Hairline.woff2') format('woff2'),
        url('../Fonts/Pencerio/Pencerio-Hairline.woff') format('woff'),
@@ -260,8 +268,8 @@ body::-webkit-scrollbar {
 
 #title-index {
     position: fixed;
-    left: 10%;
-    top: 50px;
+    left: 16%;
+    top: 60px;
     transform: translateX(-50%); /* Center the element horizontally */
     opacity: 1;
     text-align: center; /* Center the text within the element */
@@ -274,10 +282,10 @@ body::-webkit-scrollbar {
 
         #title-index .space {
             text-align: center;
-            font-family: "Bonny-Regular", serif;
+            font-family: "Desirable Calligraphy", serif;
             color: white;
             margin: 0;
-            font-size: 36px;
+            font-size: 30px;
             font-weight: 550; 
         }
 
@@ -1905,20 +1913,21 @@ left: 54%;
 }
 
 @keyframes float {
-0% {
-transform: translate(0, 0);
-}
-100% {
-transform: translate(11vw, 13vh);
+    0% {
+        transform: translate(7vw, 5vh);
+    }
+    100% {
+        transform: translate(0, 0);
     }
 }
+    
 
 @keyframes float1 {
 0% {
 transform: translate(0, 0);
 }
 100% {
-transform: translate(24vw, 12vh);
+transform: translate(12vw, 24vh);
     }
 }
 
