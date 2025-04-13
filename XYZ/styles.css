@@ -17,8 +17,9 @@
   font-family: 'Desirable Calligraphy';
   src: url('../Fonts/desirable/DesirableCalligraphy.woff2') format('woff2'),
    url('../Fonts/desirable/DesirableCalligraphy.woff') format('woff'),
-       url('../Fonts/desirable/DesirableCalligraphy.ttf') format('truetype');
-       
+   url('../Fonts/desirable/DesirableCalligraphy.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;    
 }
 
 @font-face {
