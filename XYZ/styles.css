@@ -315,7 +315,8 @@ body::-webkit-scrollbar {
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
     animation: glow 6s infinite alternate,
                 fadeOut 3s 3s forwards;
-    transition: opacity 3s ease; /* Ensure the fade-in takes 3 seconds */
+
+    transition: opacity 10s ease; /* Ensure the fade-in takes 3 seconds */
 }
 
 /* Fade-out animation (starts after 6 seconds) */
@@ -332,8 +333,8 @@ body::-webkit-scrollbar {
 
 /* Hover effect */
 #title-index:hover {
-    opacity: 1 !important; /* Override the fade-out */
-    animation: glow 6s infinite alternate,
+    
+    animation: 
                 fadeIn 3s forwards; /* Add fade-in animation */
 }
 
