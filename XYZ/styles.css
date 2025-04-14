@@ -19,7 +19,8 @@
    url('/Fonts/desirable/DesirableCalligraphy.woff') format('woff'),
    url('/Fonts/desirable/DesirableCalligraphy.eot') format('eot'),
    url('/Fonts/desirable/DesirableCalligraphy.ttf') format('truetype');
-    
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
