@@ -14,6 +14,40 @@
 // <weight>: Use a value from 400 to 900
 
 @font-face {
+  font-family: 'Olivia';
+  src: 
+   url('../Fonts/olivia/Olivia-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Flourishing Demo';
+  src: 
+   url('../Fonts/flourishing/FlourishingDemo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Christmas Calligraphy-Personal';
+  src: 
+   url('../Fonts/christmas/Christmas.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mardian Demo';
+  src: 
+   url('../Fonts/mardian/MardianDemo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
   font-family: 'Desirable Calligraphy';
   src: url('/Fonts/desirable/DesirableCalligraphy.woff2') format('woff2'),
    url('/Fonts/desirable/DesirableCalligraphy.woff') format('woff'),
@@ -284,10 +318,10 @@ body::-webkit-scrollbar {
 
         #title-index .space {
             text-align: center;
-            font-family: "Desirable Calligraphy";
+            font-family: "Mardian Demo";
             color: white;
             margin: 0;
-            font-size: 30px;
+            font-size: 66px;
            
         }
 
