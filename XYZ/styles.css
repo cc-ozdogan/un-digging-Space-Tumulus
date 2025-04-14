@@ -283,7 +283,7 @@ body::-webkit-scrollbar {
 
         #title-index .space {
             text-align: center;
-            font-family: "Desirable Calligraphy", serif;
+            font-family: "Desirable Calligraphy";
             color: white;
             margin: 0;
             font-size: 30px;
