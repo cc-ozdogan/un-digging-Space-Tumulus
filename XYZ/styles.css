@@ -17,9 +17,9 @@
   font-family: 'Desirable Calligraphy';
   src: url('../Fonts/desirable/DesirableCalligraphy.woff2') format('woff2'),
    url('../Fonts/desirable/DesirableCalligraphy.woff') format('woff'),
+   url('../Fonts/desirable/DesirableCalligraphy.eot') format('eot'),
    url('../Fonts/desirable/DesirableCalligraphy.ttf') format('truetype');
-  font-display: swap;
-  font-style: normal;    
+    
 }
 
 @font-face {
@@ -287,7 +287,7 @@ body::-webkit-scrollbar {
             color: white;
             margin: 0;
             font-size: 30px;
-            font-weight: 550; 
+           
         }
 
         #title-index .title-index2  {
