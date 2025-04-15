@@ -314,29 +314,11 @@ body::-webkit-scrollbar {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
     animation: glow 6s infinite alternate,
-                fadeOut 3s 3s forwards;
-
-    transition: opacity 10s ease; /* Ensure the fade-in takes 3 seconds */
-}
-
-/* Fade-out animation (starts after 6 seconds) */
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Hover effect */
-#title-index:hover {
     
-    animation: 
-                fadeIn 3s forwards; /* Add fade-in animation */
 }
+
+
+
 
 
         #title-index .space {
