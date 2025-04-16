@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const spans = document.querySelectorAll('.clavamage1');
     const container = document.querySelector('.stack-container-cairn, .stack-container-clava, .stack-container-topbar, .stack-container-topbar-gob, .stack-container-huly, .text-clava');
     const stackContainerTopbar = document.querySelector('.stack-container-topbar, .stack-container-topbar-gob, .stack-container-huly, .text-clava');
-    const titleIndex = document.getElementById('title-index');
+   
     
     let clickCount = 0;
 
@@ -28,8 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let scrollTop = 0;
 
     let throttleTimeout;
-     let hoverTimeout;
+    
     const scrollFactor = 4;
+    
 
     ////lightbox
 
@@ -425,30 +426,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Initial behavior: Stay for 3s, then fade out over 10s
-    setTimeout(() => {
-        titleIndex.style.transition = 'opacity 6s ease';
-        titleIndex.style.opacity = '0';
-    }, 3000); // Wait 3s before starting fade-out
-
-    // Hover handler (only works when opacity is 0)
-    titleIndex.addEventListener('mouseenter', function() {
-        if (titleIndex.style.opacity === '0') {
-            clearTimeout(hoverTimeout); // Cancel any pending fade-outs
-            
-            // Fade in over 3s, stay for 3s, then fade out over 3s
-            titleIndex.style.transition = 'opacity 3s ease';
-            titleIndex.style.opacity = '1';
-            
-            hoverTimeout = setTimeout(() => {
-                titleIndex.style.transition = 'opacity 3s ease';
-                titleIndex.style.opacity = '0';
-            }, 6000); // 3s (visible) + 3s (fade-out delay)
-        }
-    });
-
-
-
+    
 
 
 
@@ -610,7 +588,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { passive: false });
 
     // Start the cursor update loop
-    updateCursorPosition();
+    //updateCursorPosition();
 
     // Adjust cursor position on scroll
     document.addEventListener('scroll', () => {
