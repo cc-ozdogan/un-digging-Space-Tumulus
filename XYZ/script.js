@@ -28,13 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let scrollTop = 0;
 
     let throttleTimeout;
+     let hoverTimeout;
     const scrollFactor = 4;
-
-    let hoverTimeout;
 
     ////lightbox
 
     ///title
+
+      
 
     
 
@@ -424,6 +425,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Initial behavior: Stay for 3s, then fade out over 10s
+    setTimeout(() => {
+        titleIndex.style.transition = 'opacity 6s ease';
+        titleIndex.style.opacity = '0';
+    }, 3000); // Wait 3s before starting fade-out
+
+    // Hover handler (only works when opacity is 0)
+    titleIndex.addEventListener('mouseenter', function() {
+        if (titleIndex.style.opacity === '0') {
+            clearTimeout(hoverTimeout); // Cancel any pending fade-outs
+            
+            // Fade in over 3s, stay for 3s, then fade out over 3s
+            titleIndex.style.transition = 'opacity 3s ease';
+            titleIndex.style.opacity = '1';
+            
+            hoverTimeout = setTimeout(() => {
+                titleIndex.style.transition = 'opacity 3s ease';
+                titleIndex.style.opacity = '0';
+            }, 6000); // 3s (visible) + 3s (fade-out delay)
+        }
+    });
+
+
+
+
+
+
     // Dragging to scroll for .stack-container-mida
     if (stackContainerMida) {
         stackContainerMida.addEventListener('mousedown', (e) => {
@@ -590,37 +618,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     }
 
-      // Initial behavior: Stay for 3s, then fade out over 10s
-    setTimeout(() => {
-        titleIndex.style.transition = 'opacity 6s ease';
-        titleIndex.style.opacity = '0';
-    }, 3000); // Wait 3s before starting fade-out
 
-    // Hover handler (only works when opacity is 0)
-    titleIndex.addEventListener('mouseenter', function() {
-        if (titleIndex.style.opacity === '0') {
-            clearTimeout(hoverTimeout); // Cancel any pending fade-outs
-            
-            // Fade in over 3s, stay for 3s, then fade out over 3s
-            titleIndex.style.transition = 'opacity 3s ease';
-            titleIndex.style.opacity = '1';
-            
-            hoverTimeout = setTimeout(() => {
-                titleIndex.style.transition = 'opacity 3s ease';
-                titleIndex.style.opacity = '0';
-            }, 6000); // 3s (visible) + 3s (fade-out delay)
-        }
-    });
-
-    // Optional: If mouse leaves during fade-out, keep it visible
-    titleIndex.addEventListener('mouseleave', function() {
-        if (parseFloat(titleIndex.style.opacity) > 0 && parseFloat(titleIndex.style.opacity) < 1) {
-            clearTimeout(hoverTimeout);
-            titleIndex.style.opacity = '1';
-            hoverTimeout = setTimeout(() => {
-                titleIndex.style.transition = 'opacity 3s ease';
-                titleIndex.style.opacity = '0';
-            }, 6000);
-        }
-    });
 });
