@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     prompt.style.padding = '5px 10px';
                     prompt.style.borderRadius = '5px';
                     prompt.style.fontSize = '12px';
-                    prompt.textContent = 'Click anywhere to enable sound';
+                    prompt.textContent = 'Click anywhere to play the music';
                     document.body.appendChild(prompt);
                     
                     // Enable sound on first user interaction
