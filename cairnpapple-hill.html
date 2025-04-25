@@ -141,16 +141,16 @@
         <div class="play-button"></div>
     </div>
        <iframe
-        id="video-iframe"
-        width="720"
-        height="405"
-        src="https://www.youtube.com/embed/lwmDkwV3Z0M?modestbranding=1&controls=0&rel=0&showinfo=0"
-        title="ST: cairnpapple walk"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        style="display:none;"
-    ></iframe>
+    id="video-iframe"
+    width="720"
+    height="405"
+    src="https://www.youtube.com/embed/lwmDkwV3Z0M?modestbranding=1&controls=0&rel=0&showinfo=0&loop=1&playlist=lwmDkwV3Z0M"
+    title="ST: cairnpapple walk"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    style="display:none;"
+></iframe>
     </div>
     </div>
     
@@ -186,25 +186,19 @@
 
 
   <script>
-        function playVideo() {
-            const thumbnail = document.querySelector('.video-thumbnail');
-            const iframe = document.getElementById('video-iframe');
+       function playVideo() {
+    const thumbnail = document.querySelector('.video-thumbnail');
+    const iframe = document.getElementById('video-iframe');
 
-            // Add fade-out class to the thumbnail
-            thumbnail.classList.add('fade-out');
+    thumbnail.classList.add('fade-out');
 
-            // Wait for the fade-out transition to complete
-            setTimeout(() => {
-                // Hide the thumbnail
-                thumbnail.style.display = 'none';
-
-                // Show the iframe
-                iframe.style.display = 'block';
-
-                // Play the video
-                iframe.src += "&autoplay=1";
-            }, 1500); // Match this duration with the CSS transition duration
-        }
+    setTimeout(() => {
+        thumbnail.style.display = 'none';
+        iframe.style.display = 'block';
+        // Updated to include loop parameters when autoplaying
+        iframe.src = "https://www.youtube.com/embed/lwmDkwV3Z0M?modestbranding=1&controls=0&rel=0&showinfo=0&autoplay=1&loop=1&playlist=lwmDkwV3Z0M";
+    }, 1500);
+}
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
