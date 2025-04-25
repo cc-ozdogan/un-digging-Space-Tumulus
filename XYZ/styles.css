@@ -2611,7 +2611,7 @@ opacity: 0.5;
 #tumulus1 a img {
 
     max-width: 100px;
-    transform: scale(1.5);
+    transform: scale(1.2);
      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
     animation: glow 6s infinite alternate;
 
