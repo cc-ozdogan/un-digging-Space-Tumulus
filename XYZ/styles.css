@@ -3366,7 +3366,7 @@ left: 21%;
 
  #toggleButton {
             position: fixed;
-            left:50px;
+            left: 25px;
             bottom: 33%;
             background: transparent;
             border: none;
