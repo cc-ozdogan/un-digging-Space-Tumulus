@@ -785,8 +785,8 @@ display: flex;
 justify-content: center;
 
 width: 100%;
-bottom: 433px;
-left: 400px;
+bottom: 600px;
+left: 600px;
 
 
 
@@ -796,7 +796,7 @@ left: 400px;
 
     box-shadow: 22px 17px 30px rgba(0, 0, 0, 0.7);
     border-radius: 20px 20px;
-    transform: scale(2.4);
+    transform: scale(2.1);
 }
 
 #gif {
@@ -1067,7 +1067,7 @@ overflow: auto;
             top: 0;
             /* Position to the right of the link */
             opacity: 0.9;
-            width: 200px;
+            width: 200px;   
             height: 200px;
             object-fit: contain;
             transform: scale(1);
@@ -2863,6 +2863,255 @@ left: 21%;
     }
 }
 
+#asc4 {
+    position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
+    top:444px;             /* Places the div at the very top of its containing element */
+    left: 0;            /* Optional: Aligns it to the left edge */
+    right: 0;           /* Optional: Stretches it to the right edge */
+    margin: 0;          /* Removes any default margin */
+    padding: 0;         /* Optional: Removes padding if needed */
+    width: 100%;   
+    display: flex;      /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;   
+     font-family: 'Courier New', Courier, monospace;
+         -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000
+}
+
+#asc4 span {
+            
+
+           
+    font-size: 0.9vw; /* Use viewport width for responsive font size */
+    text-shadow: 0 0 10px rgba(2, 48, 32, 0.9);
+    white-space: pre-wrap; /* Allow wrapping of text */
+    word-break: break-all; /* Break words if necessary */
+    line-height: 1;
+     max-width: 100%; 
+     overflow: hidden;
+  
+
+}
+
+@media (max-width: 1200px) {
+    #asc4 span {
+        font-size: 0.60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #asc4 span {
+        font-size: 0.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #asc4 span {
+        font-size: 2.1vw;
+    }
+}
+
+#asc5 {
+    position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
+    top:222px;             /* Places the div at the very top of its containing element */
+    left: 0;            /* Optional: Aligns it to the left edge */
+    right: 0;           /* Optional: Stretches it to the right edge */
+    margin: 0;          /* Removes any default margin */
+    padding: 0;         /* Optional: Removes padding if needed */
+    width: 100%;   
+    display: flex;      /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;   
+     font-family: 'Courier New', Courier, monospace;
+         -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000
+}
+
+#asc5 span {
+            
+
+           
+    font-size: 0.9vw; /* Use viewport width for responsive font size */
+    text-shadow: 0 0 10px rgba(2, 48, 32, 0.9);
+    white-space: pre-wrap; /* Allow wrapping of text */
+    word-break: break-all; /* Break words if necessary */
+    line-height: 1;
+     max-width: 100%; 
+     overflow: hidden;
+  
+
+}
+
+@media (max-width: 1200px) {
+    #asc5 span {
+        font-size: 0.60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #asc5 span {
+        font-size: 0.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #asc5 span {
+        font-size: 2.1vw;
+    }
+}
+
+#asc6 {
+    position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
+    top: 231px;             /* Places the div at the very top of its containing element */
+    left: 0;            /* Optional: Aligns it to the left edge */
+    right: 0;           /* Optional: Stretches it to the right edge */
+    margin: 0;          /* Removes any default margin */
+    padding: 0;         /* Optional: Removes padding if needed */
+    width: 100%;   
+    display: flex;      /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;   
+     font-family: 'Courier New', Courier, monospace;
+         -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000
+}
+
+#asc6 span {
+            
+
+           
+    font-size: 0.9vw; /* Use viewport width for responsive font size */
+    text-shadow: 0 0 10px rgba(2, 48, 32, 0.9);
+    white-space: pre-wrap; /* Allow wrapping of text */
+    word-break: break-all; /* Break words if necessary */
+    line-height: 1;
+     max-width: 100%; 
+     overflow: hidden;
+  
+
+}
+
+@media (max-width: 1200px) {
+    #asc6 span {
+        font-size: 0.60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #asc6 span {
+        font-size: 0.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #asc6 span {
+        font-size: 2.1vw;
+    }
+}
+
+#asc7 {
+    position: absolute;
+    top: 39%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    /* Remove absolute positioning */
+    position: relative;
+    /* Remove fixed height */
+    min-height: 100vh;
+    display: block; /* Change from flex to block */
+}
+
+#asc7 span {
+            
+
+           
+    font-size: 0.9vw; /* Use viewport width for responsive font size */
+    text-shadow: 0 0 10px rgba(2, 48, 32, 0.9);
+    white-space: pre-wrap; /* Allow wrapping of text */
+    word-break: break-all; /* Break words if necessary */
+    line-height: 1;
+     max-width: 100%; 
+     overflow: hidden;
+  
+
+}
+
+@media (max-width: 1200px) {
+    #asc7 span {
+        font-size: 0.60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #asc7 span {
+        font-size: 0.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #asc7 span {
+        font-size: 2.1vw;
+    }
+}
+
+#asc8 {
+    position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
+    top: 243px;             /* Places the div at the very top of its containing element */
+    left: 0;            /* Optional: Aligns it to the left edge */
+    right: 0;           /* Optional: Stretches it to the right edge */
+    margin: 0;          /* Removes any default margin */
+    padding: 0;         /* Optional: Removes padding if needed */
+    width: 100%;   
+    display: flex;      /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;   
+     font-family: 'Courier New', Courier, monospace;
+         -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000
+}
+
+#asc8 span {
+            
+
+           
+    font-size: 0.9vw; /* Use viewport width for responsive font size */
+    text-shadow: 0 0 10px rgba(2, 48, 32, 0.9);
+    white-space: pre-wrap; /* Allow wrapping of text */
+    word-break: break-all; /* Break words if necessary */
+    line-height: 1;
+     max-width: 100%; 
+     overflow: hidden;
+  
+
+}
+
+@media (max-width: 1200px) {
+    #asc8 span {
+        font-size: 0.60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #asc8 span {
+        font-size: 0.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #asc8 span {
+        font-size: 2.1vw;
+    }
+}
+
  #center-clava .TC1 {
             position: relative; /* Ensure the link is positioned relatively */
             cursor: none;
@@ -2911,8 +3160,9 @@ left: 21%;
 
 .cairn-video {
     position: absolute; /* Position the video on top */
-    bottom: 5%; /* Align to the top */
-    left: 50%; /* Center horizontally */
+    bottom: 0px; /* Align to the top */
+    left: 50%;
+    margin-bottom: 100px; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for exact centering */
     pointer-events: none;
 
@@ -3114,3 +3364,40 @@ left: 21%;
     transition: all 1s ease;
 }
 
+ #toggleButton {
+            position: fixed;
+            left:50px;
+            bottom: 33%;
+            background: transparent;
+            border: none;
+            padding: 0;
+            cursor: none;
+            margin-bottom: 10px;
+            z-index: 9999;
+
+        }
+        
+        #toggleButton img {
+            width: 90px; /* Adjust as needed */
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+            animation: glow 6s infinite alternate,
+        }
+        
+        /* Start with letters hidden by default */
+        #asc4 .letter, #asc6 .letter, #asc5 .letter,  #asc7 .letter, #asc8 .letter {
+            opacity: 0;
+        }
+        
+        /* Class to show letters when toggled */
+        #asc4.show-letters .letter, #asc6.show-letters .letter, #asc5.show-letters .letter, #asc7.show-letters .letter, #asc8.show-letters .letter  {
+            opacity: 1;
+        }
+
+   .content-column {
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}     
