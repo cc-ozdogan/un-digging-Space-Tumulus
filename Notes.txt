@@ -1,0 +1,160 @@
+Je t'aime CC 
+
+
+
+ST: CLAVA TUMULUS 
+
+Date: Karakuş Tumulus, İstanbul Archeology Museum Archive
+Location: Clava Cairn, Inverness, The Highlands and Islands of Scotland. 
+Time: A summer afternoon to evening
+Weather Conditions: Humid and rainy and drizzle  
+Context: A multi-sensory research practice
+
+
+a long one. took so long. worth it. 
+supported by gsa. thank you gsa. and thank you daniel. 
+The game boy. a friend. 
+always walk 5 kilometres beyond. we did a good walk.
+to clava tumulus. 4,000 years old. a stone circle in Inverness. 
+the highlands and islands of scotland. a famous tumulus. 
+inspired the tv show. outlander. 
+craigh na dun. the fictional name. but. that's not the point. 
+A special house for the special deads. 
+a beautiful roofless house. made by the bronze age society. 
+the point is the stone paths. the matrix. straight line to the sun. 
+stones are aligned with the midwinter solstice. 
+why? the astronomical alignment? the embodiment of unknown. 
+the queer flirt of stone and sun. life to deads. light to graves. 
+the point. dead is not end. the endless eddy. 
+It's muddy everywhere. 
+my raincoat on me. My storm umbrella protect my cameras.
+daniel is recording the bird sounds. 
+people are speaking in the background.
+the sun comes and goes. eddying around the architecture of the frozen music. 
+my eddying is based on the geometric pattern.
+becoming a drop of rain. that is the point.       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*rgba(106,227,164,255)*/
+
+Location: From Glasgow to Bathgate
+Time: 4:45
+whispering. with winds. birds. Sheeps.
+the 1st field research.
+Cairnpapple known by its rituals. 
+tea is always part of my ritual.
+i trusted the sun.
+it was as dark as underneath of the tumulus
+as cold as the moon.
+we were actually in the space tumulus!
+there were a high up stairs to the hill
+you only see the sky at the end. nothing else.
+sema means the sky in Turkish.
+the wind is always there in Scotland.
+i walked around the tumulus multiple times and different direction.
+my hands were shaking.
+honestly, at that moment, i didn't know what i was doing anymore.
+it is too much manipulation!
+i kept walking, listening, thinking, freezing, un/digging!
+
+clava 
+
+"A summer afternoon to evening"
+"a long one"
+"The game boy."
+"a friend" 
+"4,000 years old"
+"craigh na dun."
+"A special house for the special deads."
+"the bronze age society."
+"straight line to the sun."
+
+"the queer flirt of stone and sun."
+"life to deads. light to graves."
+"dead is not end."
+"the endless eddy."
+"my raincoat on me."
+"the sun comes and goes."
+"eddying around the architecture of the frozen music."
+"becoming a drop of rain."
+"that is the point."    
+
+list of words Endless  Eddying  Unknown Queer Frozen 
+loving_words = ["Queer", "Frozen", "Eddying", "Unknown", "Endless"]
+
+<div class="sentences">
+            <div class="sentence" style="--rotate: -10deg;">A summer afternoon to evening</div>
+            <div class="sentence" style="--rotate: 5deg;">a long one</div>
+            <div class="sentence" style="--rotate: -7deg;">The game boy.</div>
+            <div class="sentence" style="--rotate: 12deg;">a friend</div>
+            <div class="sentence" style="--rotate: -3deg;">4,000 years old</div>
+            <div class="sentence" style="--rotate: 8deg;">craigh na dun.</div>
+            <div class="sentence" style="--rotate: -15deg;">A special house for the special deads.</div>
+            <div class="sentence" style="--rotate: 4deg;">the bronze age society.</div>
+            <div class="sentence" style="--rotate: -9deg;">straight line to the sun.</div>
+            <div class="sentence" style="--rotate: 6deg;">the queer flirt of stone and sun.</div>
+            <div class="sentence" style="--rotate: -11deg;">life to deads. light to graves.</div>
+            <div class="sentence" style="--rotate: 2deg;">dead is not end.</div>
+            <div class="sentence" style="--rotate: -13deg;">the endless eddy.</div>
+            <div class="sentence" style="--rotate: 10deg;">my raincoat on me.</div>
+            <div class="sentence" style="--rotate: -5deg;">the sun comes and goes.</div>
+            <div class="sentence" style="--rotate: 14deg;">eddying around the architecture of the frozen music.</div>
+            <div class="sentence" style="--rotate: -2deg;">becoming a drop of rain.</div>
+            <div class="sentence" style="--rotate: 7deg;">that is the point.</div>
+        </div>
+
+with powershell
+
+@echo off
+setlocal enabledelayedexpansion
+
+REM Directory containing the original images
+set "inputDir=C:\Users\Abnosia\Desktop\Undigging\IMG\Clava"
+REM Directory to save the thumbnails
+set "outputDir=C:\Users\Abnosia\Desktop\Undigging\IMG\Clava\Thumbnails"
+REM Thumbnail dimensions
+set "width=300"
+set "height=250"
+
+REM Create the output directory if it doesn't exist
+if not exist "%outputDir%" mkdir "%outputDir%"
+
+REM Initialize a counter for numbering the thumbnails
+set counter=1
+
+REM Loop through each .jpg file in the input directory
+for %%f in ("%inputDir%\*.jpg") do (
+    REM Define the output path for the thumbnail
+    set "outputPath=%outputDir%\!counter!-thumb.jpg"
+
+    REM Resize the image and save it to the output path
+    magick "%%f" -resize %width%x%height% "!outputPath!"
+
+    REM Increment the counter
+    set /a counter+=1
+)
+
+endlocal
+
+
+
+
+
+-
