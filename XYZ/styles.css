@@ -230,12 +230,6 @@ align-items: center;
 
 body img {
 
-     -webkit-filter: grayscale(100%); /* For Safari and older versions of Chrome */
-        -moz-filter: grayscale(100%);    /* For older versions of Firefox */
-        -ms-filter: grayscale(100%);    /* For older versions of Internet Explorer */
-        -o-filter: grayscale(100%);    /* For older versions of Opera */
-        filter: grayscale(100%); 
-
 
 }
 
