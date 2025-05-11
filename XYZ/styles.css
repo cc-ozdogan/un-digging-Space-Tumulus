@@ -362,7 +362,22 @@ body::-webkit-scrollbar {
 
 @font-face {
             font-family: 'Custom';
+            src: url('../Fonts/symbols/u14400.woff') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+@font-face {
+            font-family: 'Custom';
             src: url('../Fonts/symbols/u1f400.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+@font-face {
+            font-family: 'Custom';
+            src: url('../Fonts/symbols/u2400.woff2') format('woff2');
             font-weight: normal;
             font-style: normal;
         }
@@ -2915,7 +2930,7 @@ left: 21%;
 
 #asc5 {
     position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
-    top:222px;             /* Places the div at the very top of its containing element */
+    top:153px;             /* Places the div at the very top of its containing element */
     left: 0;            /* Optional: Aligns it to the left edge */
     right: 0;           /* Optional: Stretches it to the right edge */
     margin: 0;          /* Removes any default margin */
@@ -2925,7 +2940,7 @@ left: 21%;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     height: 100vh;   
-     font-family: 'Courier New', Courier, monospace;
+     font-family: 'Courier New', Courier, monospace, 'Custom';
          -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000
 }
@@ -3401,3 +3416,159 @@ left: 21%;
     min-height: 100vh;
     
 }     
+
+#forest .fungi1 {
+            font-family: Custom;
+            position: absolute; /* Ensure the link is positioned relatively */
+            cursor: none;
+            text-decoration: none;
+            color: #B2BEB5;
+                 /* Change to pointer for better UX */
+            font-size: 42px;
+            position: relative; /* Ensure the image is positioned relative to the link */
+        }
+
+
+
+#forest .fungi1 img {
+            display: none; /* Hide the image initially */
+            position: absolute; /* Position the image absolutely within the link */
+            top: 0; /* Position from the top */
+            left: 50%; /* Position to the right of the link */
+            margin-left: 10px; /* Add some space between the link and the image */
+            width: 250px; /* Set the thumbnail size */
+            height: auto; /* Maintain aspect ratio */
+            transition: opacity 1s ease-in-out; /* Smooth transition for visibility */
+             z-index: 10000;         
+        }
+
+       #forest .fungi1:hover img {
+            display: block; /* Show the image on hover */
+        }
+
+ #asc5 #forest .fungi1-2 {
+    position: absolute;
+    left: 261px;
+    bottom: 100px;
+ }
+
+ #asc5 #forest .fungi1-1 {
+    position: absolute;
+    top: 10px;
+    left: 166px;
+ }
+
+ #asc5 #forest .fungi1-3 {
+    position: absolute;
+    top: 240px;
+    left: 396px;
+ }
+
+#asc5 #forest .fungi2-1 {
+    position: absolute;
+    top: 10px;
+    left: 27%;
+ }
+
+ #asc5 #forest .fungi2-2 {
+    position: absolute;
+    right: 33%;
+    bottom: 100px;
+ }
+
+ #asc5 #forest .fungi2-3 {
+    position: absolute;
+    top: 240px;
+    left: 54%;
+ }
+
+ #asc1 #forest .fungi3-1 {
+    position: absolute;
+    top: 15%;
+    left: 42%;
+ }
+
+ #asc1 #forest .fungi3-2 {
+    position: absolute;
+    right: 42%;
+    bottom: 100px;
+ }
+
+ #asc1 #forest .fungi3-3 {
+    position: absolute;
+    top: 240px;
+    left: 66%;
+ }
+
+ #asc8 #forest .fungi4-1 {
+    position: absolute;
+    top: 39%;
+    left: 63%;
+ }
+
+ #asc8 #forest .fungi4-2 {
+    position: absolute;
+    right: 50%;
+    bottom: 100px;
+ }
+
+ #asc8 #forest .fungi4-3 {
+    position: absolute;
+    top: 12%;
+    right: 12%;
+ }
+
+ #asc7 #forest .fungi5-1 {
+    position: absolute;
+    top: 39%;
+    left: 51%;
+ }
+
+ #asc7 #forest .fungi5-2 {
+    position: absolute;
+    left: 42%;
+    top: 24%;
+ }
+
+ #asc7 #forest .fungi5-3 {
+    position: absolute;
+    top: 12%;
+    right: 12%;
+ }
+
+  #asc6 #forest .fungi6-1 {
+    position: absolute;
+    top: 54%;
+    left: 33%;
+ }
+
+ #asc6 #forest .fungi6-2 {
+    position: absolute;
+    left: 42%;
+    top: 24%;
+ }
+
+ #asc6 #forest .fungi6-3 {
+    position: absolute;
+    top: 66%;
+    right: 42%;
+ }
+
+
+   #asc4 #forest .fungi7-1 {
+    position: absolute;
+    top: 0%;
+    left: 42%;
+ }
+
+ #asc4 #forest .fungi7-2 {
+    position: absolute;
+    left: 42%;
+    top: 21%;
+ }
+
+ #asc4 #forest .fungi7-3 {
+    position: absolute;
+    top: 12%;
+    right: 42%;
+ }
