@@ -13,6 +13,29 @@
  // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 400 to 900
 
+
+
+
+@font-face {
+  font-family: 'CelticPatterns';
+  src: 
+   
+   url('../Fonts/symbols/CelticPatterns.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'CeltiCons';
+  src: 
+   url('../Fonts/symbols/CeltiCons.woff2') format('woff2'),
+   url('../Fonts/symbols/CeltiCons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 @font-face {
   font-family: 'Olivia';
   src: 
@@ -794,7 +817,7 @@ display: flex;
 justify-content: center;
 
 width: 100%;
-bottom: 600px;
+bottom: 666px;
 left: 600px;
 
 
@@ -2773,7 +2796,7 @@ left: 21%;
 
 #asc1 {
     position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
-    top: 12%;             /* Places the div at the very top of its containing element */
+    top: 24%;             /* Places the div at the very top of its containing element */
     left: 0;            /* Optional: Aligns it to the left edge */
     right: 0;           /* Optional: Stretches it to the right edge */
     margin: 0;          /* Removes any default margin */
@@ -2924,7 +2947,7 @@ left: 21%;
 
 #asc5 {
     position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
-    top:153px;             /* Places the div at the very top of its containing element */
+    top: 201px;             /* Places the div at the very top of its containing element */
     left: 0;            /* Optional: Aligns it to the left edge */
     right: 0;           /* Optional: Stretches it to the right edge */
     margin: 0;          /* Removes any default margin */
@@ -2974,7 +2997,7 @@ left: 21%;
 
 #asc6 {
     position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
-    top: 231px;             /* Places the div at the very top of its containing element */
+    top: 273px;             /* Places the div at the very top of its containing element */
     left: 0;            /* Optional: Aligns it to the left edge */
     right: 0;           /* Optional: Stretches it to the right edge */
     margin: 0;          /* Removes any default margin */
@@ -3073,7 +3096,7 @@ left: 21%;
 
 #asc8 {
     position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
-    top: 243px;             /* Places the div at the very top of its containing element */
+    top: 283px;             /* Places the div at the very top of its containing element */
     left: 0;            /* Optional: Aligns it to the left edge */
     right: 0;           /* Optional: Stretches it to the right edge */
     margin: 0;          /* Removes any default margin */
@@ -3117,6 +3140,56 @@ left: 21%;
 
 @media (max-width: 480px) {
     #asc8 span {
+        font-size: 2.1vw;
+    }
+}
+
+#asc9 {
+    position: absolute; /* or use 'fixed' if you want it to stay at the top even when scrolling */
+    top: 303px;             /* Places the div at the very top of its containing element */
+    left: 0;            /* Optional: Aligns it to the left edge */
+    right: 0;           /* Optional: Stretches it to the right edge */
+    margin: 0;          /* Removes any default margin */
+    padding: 0;         /* Optional: Removes padding if needed */
+    width: 100%;   
+    display: flex;      /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;   
+     font-family: 'Courier New', Courier, monospace, 'Custom';
+         -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000
+}
+
+#asc9 span {
+            
+
+           
+    font-size: 0.9vw; /* Use viewport width for responsive font size */
+    text-shadow: 0 0 10px rgba(2, 48, 32, 0.9);
+    white-space: pre-wrap; /* Allow wrapping of text */
+    word-break: break-all; /* Break words if necessary */
+    line-height: 1;
+     max-width: 100%; 
+     overflow: hidden;
+  
+
+}
+
+@media (max-width: 1200px) {
+    #asc9 span {
+        font-size: 0.60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #asc9 span {
+        font-size: 0.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #asc9 span {
         font-size: 2.1vw;
     }
 }
@@ -3394,12 +3467,12 @@ left: 21%;
         }
         
         /* Start with letters hidden by default */
-        #asc4 .letter, #asc6 .letter, #asc5 .letter,  #asc7 .letter, #asc8 .letter {
+        #asc4 .letter, #asc6 .letter, #asc5 .letter,  #asc7 .letter, #asc8 .letter, #asc9 .letter {
             opacity: 0;
         }
         
         /* Class to show letters when toggled */
-        #asc4.show-letters .letter, #asc6.show-letters .letter, #asc5.show-letters .letter, #asc7.show-letters .letter, #asc8.show-letters .letter  {
+        #asc4.show-letters .letter, #asc6.show-letters .letter, #asc5.show-letters .letter, #asc7.show-letters .letter, #asc8.show-letters .letter, #asc9.show-letters .letter  {
             opacity: 1;
         }
 
@@ -3409,16 +3482,326 @@ left: 21%;
     flex-direction: column;
     min-height: 100vh;
     
-}     
+}   
+
+
+
+
+#asc5 #forest .visible-celtic {
+    
+    width: 24px; /* Adjust size */
+    height: 24px;
+    opacity: 0.5;
+    transition: opacity 1s ease-in-out;
+    padding: 15px; 
+    box-sizing: content-box; 
+  
+  }
+
+  #asc4 #forest .visible-celtic {
+    
+    width: 24px; /* Adjust size */
+    height: 24px;
+    opacity: 0.5;
+    transition: opacity 1s ease-in-out;
+    padding: 15px; 
+    box-sizing: content-box; 
+  
+  }
+
+  #asc7 #forest .visible-celtic {
+    
+    width: 24px; /* Adjust size */
+    height: 24px;
+    opacity: 0.5;
+    transition: opacity 1s ease-in-out;
+    padding: 15px; 
+    box-sizing: content-box; 
+  
+  }
+
+  #asc9 #forest .visible-celtic {
+    
+    width: 24px; /* Adjust size */
+    height: 24px;
+    opacity: 0.5;
+    transition: opacity 1s ease-in-out;
+    padding: 15px; 
+    box-sizing: content-box; 
+  
+  }
+
+
+
+  #asc5 #forest .vc1 {
+
+    position: absolute;
+    left: 15%;
+    top: 5%;
+
+  }
+
+  #asc5 #forest .vc2 {
+    
+    position: absolute;
+    left: 36%;
+    top: 33%;
+    
+
+  }
+
+  #asc5 #forest .vc3 {
+    
+    position: absolute;
+    left: 12%;
+    top: 90%;
+    
+
+  }
+
+  #asc5 #forest .vc4 {
+    
+    position: absolute;
+    left: 24%;
+    top: 54%;
+    
+
+  }
+
+  #asc4 #forest .vc1 {
+
+    position: absolute;
+    left: 42%;
+    top: 33%;
+
+  }
+
+  #asc4 #forest .vc2 {
+
+    position: absolute;
+    left: 46%;
+    top: -33%;
+
+  }
+
+  #asc4 #forest .vc3 {
+
+    position: absolute;
+    left: 54%;
+    top: 5%;
+
+  }
+
+  #asc4 #forest .vc3 {
+
+    position: absolute;
+    left: 60%;
+    top: 5%;
+
+  }
+
+  #asc4 #forest .vc4 {
+
+    position: absolute;
+    left: 39%;
+    top: -12%;
+
+  }
+
+  #asc7 #forest .vc1 {
+
+    position: absolute;
+    left: 42%;
+    top: 33%;
+
+  }
+
+  #asc7 #forest .vc2 {
+
+    position: absolute;
+    left: 15%;
+    top: 21%;
+
+  }
+
+  #asc7 #forest .vc3 {
+
+    position: absolute;
+    left: 54%;
+    top: 5%;
+
+  }
+
+  
+
+  #asc7 #forest .vc4 {
+
+    position: absolute;
+    left: 51%;
+    top: 24%;
+
+  }
+
+  #asc9 #forest .vc1 {
+
+    position: absolute;
+    left: 66%;
+    top: 33%;
+
+  }
+
+  #asc9 #forest .vc2 {
+
+    position: absolute;
+    left: 33%;
+    top: 24%;
+
+  }
+
+  #asc9 #forest .vc3 {
+
+    position: absolute;
+    left: 54%;
+    top: -21%;
+
+  }
+
+  
+
+  #asc9 #forest .vc4 {
+
+    position: absolute;
+    left: 42%;
+    top: 51%;
+
+  }
+
+
+
+
+
+ #forest .invisible-celtic {
+    display: none; /* Hide the image initially */
+            position: absolute; /* Position the image absolutely within the link */
+            top: 0; /* Position from the top */
+            left: 50%; /* Position to the right of the link */
+            margin-left: 10px; /* Add some space between the link and the image */
+            width: 250px; /* Set the thumbnail size */
+            height: auto; /* Maintain aspect ratio */
+            transition: opacity 1s ease-in-out; /* Smooth transition for visibility */
+             z-index: 10000;  
+            transform: scale(1.5);
+        
+  
+  }
+
+
+  #forest .visible-celtic:hover + .fungi1 .invisible-celtic,
+  #forest .fungi1:hover .invisible-celtic {
+    display: block;
+  }
+
+   #asc5 #forest .fungi1-1 {
+    position: absolute;
+    left: 15%;
+    top: 13%;
+
+             
+ }
+
+ #asc5 #forest .fungi1-2 {
+    position: absolute;
+    left: 10%;
+    top: 33%;
+          
+ }
+
+  #asc5 #forest .fungi1-3 {
+    position: absolute;
+    left: 24%;
+    top: 13%;
+          
+ }
+
+ #asc5 #forest .fungi1-4 {
+    position: absolute;
+    left: 24%;
+    top: 27%;
+          
+ }
+ 
+
+
+ #asc4 #forest .fungi1-2 {
+    position: absolute;
+    right: 42%;
+    top: -24%;
+          
+ }
+
+
+ #asc7 #forest .fungi1-1 {
+    position: absolute;
+    right: 42%;
+    top: 24%;
+          
+ }
+
+#asc7 #forest .fungi1-2 {
+    position: absolute;
+    left: 30%;
+    top: 24%;
+          
+ }
+ #asc7 #forest .fungi1-3 {
+    position: absolute;
+    right: 42%;
+    top: 12%;
+          
+ }
+ #asc7 #forest .fungi1-4 {
+    position: absolute;
+    left: 24%;
+    top: 24%;
+          
+ }
+
+ #asc9 #forest .fungi1-1 {
+    position: absolute;
+    left: 42%;
+    top: 24%;
+          
+ }
+
+#asc9 #forest .fungi1-2 {
+    position: absolute;
+    left: 42%;
+    top: 12%;
+          
+ }
+ #asc9 #forest .fungi1-3 {
+    position: absolute;
+    right: 42%;
+    top: 0%;
+          
+ }
+ #asc9 #forest .fungi1-4 {
+    position: absolute;
+    left: 24%;
+    top: 15%;
+          
+ }
+ 
 
 #forest .fungi1 {
-            font-family: Custom;
+            font-family: 'Custom', 'CelticPatterns', sans-serif;
             position: absolute; /* Ensure the link is positioned relatively */
             cursor: none;
             text-decoration: none;
             color: #B2BEB5;
                  /* Change to pointer for better UX */
             font-size: 42px;
+            
             position: relative; /* Ensure the image is positioned relative to the link */
         }
 
@@ -3428,17 +3811,22 @@ left: 21%;
             display: none; /* Hide the image initially */
             position: absolute; /* Position the image absolutely within the link */
             top: 0; /* Position from the top */
-            left: 50%; /* Position to the right of the link */
-            margin-left: 10px; /* Add some space between the link and the image */
+            right: 369%; /* Position to the right of the link */
+            margin-right: 10px; /* Add some space between the link and the image */
             width: 250px; /* Set the thumbnail size */
             height: auto; /* Maintain aspect ratio */
             transition: opacity 1s ease-in-out; /* Smooth transition for visibility */
-             z-index: 10000;         
+             z-index: 10000;  
+              transform: scale(1.5);       
         }
 
        #forest .fungi1:hover img {
             display: block; /* Show the image on hover */
         }
+
+       #forest .visible-celtic:hover + .fungi1 .invisible-celtic img     {
+    display: block;
+  }
 
  #asc5 #forest .fungi1-2 {
     position: absolute;
@@ -3446,11 +3834,7 @@ left: 21%;
     bottom: 100px;
  }
 
- #asc5 #forest .fungi1-1 {
-    position: absolute;
-    top: 10px;
-    left: 166px;
- }
+
 
  #asc5 #forest .fungi1-3 {
     position: absolute;
@@ -3458,21 +3842,21 @@ left: 21%;
     left: 396px;
  }
 
-#asc5 #forest .fungi2-1 {
+#asc9 #forest .fungi2-1 {
     position: absolute;
-    top: 10px;
+    top: 0px;
     left: 27%;
  }
 
- #asc5 #forest .fungi2-2 {
+ #asc9 #forest .fungi2-2 {
     position: absolute;
     right: 33%;
-    bottom: 100px;
+    bottom: 180px;
  }
 
- #asc5 #forest .fungi2-3 {
+ #asc9 #forest .fungi2-3 {
     position: absolute;
-    top: 240px;
+    top: 222px;
     left: 54%;
  }
 
@@ -3485,7 +3869,7 @@ left: 21%;
  #asc1 #forest .fungi3-2 {
     position: absolute;
     right: 42%;
-    bottom: 100px;
+    bottom: 121px;
  }
 
  #asc1 #forest .fungi3-3 {
@@ -3509,7 +3893,7 @@ left: 21%;
  #asc8 #forest .fungi4-3 {
     position: absolute;
     top: 12%;
-    right: 12%;
+    right: 24%;
  }
 
  #asc7 #forest .fungi5-1 {
