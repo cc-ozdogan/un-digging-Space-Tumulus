@@ -863,17 +863,23 @@ width .5s ease-in-out;
 display: flex;
 justify-content: center;
 align-items: center;
+transform: translate(0, 0);
+    will-change: transform
 
 }
 
 #cursor {
-position: absolute;
+position: fixed;
 pointer-events: none;
 z-index: 11112; 
 transition: left 0.1s ease-out, top 0.1s ease-out; 
 overflow: auto;
  transform: translate(-50%, -50%); /* Center the cursor */
-
+ will-change: transform;
+  user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 
@@ -1736,13 +1742,13 @@ overflow: auto;
 }
 
 .topbar {
-    position: absolute; /* Use fixed positioning to keep it at the top edge */
+    position: fixed; /* Use fixed positioning to keep it at the top edge */
     top: 0; /* Position it at the top edge of the viewport */
     left: 0; /* Position it at the left edge of the viewport */
     width: 100%; /* Make it span the full width of the viewport */
     height: 125px; /* Set a fixed height for the top bar */
     z-index: 999;
-      
+    pointer-events: auto; /* Ensures it can be interacted with */  
 
 }
 
@@ -3729,6 +3735,13 @@ left: 21%;
     top: 27%;
           
  }
+
+ #asc4 #forest .fungi1-1 {
+    position: absolute;
+    left: 24%;
+    top: 0%;
+          
+ }
  
 
 
@@ -3736,6 +3749,20 @@ left: 21%;
     position: absolute;
     right: 42%;
     top: -24%;
+          
+ }
+
+ #asc4 #forest .fungi1-4 {
+    position: absolute;
+    right: 42%;
+    top: -24%;
+          
+ }
+
+ #asc4 #forest .fungi1-4 {
+    position: absolute;
+    left: 24%;
+    top: 3%;
           
  }
 
@@ -3950,3 +3977,64 @@ left: 21%;
     top: 12%;
     right: 42%;
  }
+
+ .cursor-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.cursor-toggle-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.05);
+}
+
+.cursor-toggle-btn .toggle-icon {
+    font-size: 18px;
+}
+
+.cursor-toggle-btn.disabled .toggle-text {
+    color: #ccc;
+}
+
+.cursor-toggle-btn.disabled .toggle-icon {
+    color: #ccc;
+}
+
+* When custom cursor is disabled */
+body.custom-cursor-disabled {
+    cursor: auto !important;
+}
+
+/* Reset cursor for all elements when custom cursor is disabled */
+body.custom-cursor-disabled * {
+    cursor: auto !important;
+}
+
+/* Ensure the custom cursor itself doesn't interfere */
+#cursor {
+    pointer-events: none !important;
+}
+
+/* Reset cursor for specific elements that might have custom cursor styles */
+body.custom-cursor-disabled a,
+body.custom-cursor-disabled button,
+body.custom-cursor-disabled .drag,
+body.custom-cursor-disabled .floating,
+body.custom-cursor-disabled .clavamage1,
+body.custom-cursor-disabled .TC1 {
+    cursor: pointer !important;
+}
