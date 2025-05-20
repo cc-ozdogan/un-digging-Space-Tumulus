@@ -1,6 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Feature detection for requestAnimationFrame and cancelAnimationFrame
+    if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = (function() {
+            return window.webkitRequestAnimationFrame ||
+                   window.mozRequestAnimationFrame ||
+                   window.oRequestAnimationFrame ||
+                   window.msRequestAnimationFrame ||
+                   function(callback) {
+                       window.setTimeout(callback, 1000 / 60);
+                   };
+        })();
+    }
+
+    if (!window.cancelAnimationFrame) {
+        window.cancelAnimationFrame = (function() {
+            return window.webkitCancelAnimationFrame ||
+                   window.mozCancelAnimationFrame ||
+                   window.oCancelAnimationFrame ||
+                   window.msCancelAnimationFrame ||
+                   function(id) {
+                       window.clearTimeout(id);
+                   };
+        })();
+    }
+
+    // Check if the elements exist before proceeding
     const customCursor = document.getElementById('cursor');
     const flashlight = document.getElementById('flashlight');
+
+    if (!customCursor) {
+        console.error('Custom cursor element not found');
+        return;
+    }
 
     // Create toggle button with just the mouse icon
     const toggleButton = document.createElement('button');
@@ -20,7 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentX = 0, currentY = 0;
     const easing = 0.15;
     let animationFrameId = null;
-    let isCursorEnabled = true;
+    let isCursorEnabled = localStorage.getItem('cursorEnabled') !== 'false'; // Load from localStorage
+
+    // Apply initial state
+    if (!isCursorEnabled) {
+        customCursor.style.display = 'none';
+        toggleButton.textContent = '🚫'; // Prohibited icon
+        document.body.classList.add('custom-cursor-disabled');
+    }
 
     // Smooth linear interpolation
     function lerp(start, end, t) {
@@ -71,6 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleCursor() {
         isCursorEnabled = !isCursorEnabled;
 
+        // Save state to localStorage
+        localStorage.setItem('cursorEnabled', isCursorEnabled);
+
         if (isCursorEnabled) {
             // Enable cursor
             customCursor.style.display = 'block';
@@ -95,21 +136,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Add event listeners
-    document.addEventListener('mousemove', handleMouseMove, { passive: true });
-    document.addEventListener('touchmove', handleTouchMove, { passive: true });
+    // Add event listeners with passive event listener support check
+    const passiveSupported = (function() {
+        let passiveSupported = false;
+        try {
+            const options = Object.defineProperty({}, 'passive', {
+                get: function() {
+                    passiveSupported = true;
+                }
+            });
+            window.addEventListener('test', null, options);
+        } catch (err) {}
+        return passiveSupported;
+    })();
+
+    const eventOptions = passiveSupported ? { passive: true } : false;
+
+    document.addEventListener('mousemove', handleMouseMove, eventOptions);
+    document.addEventListener('touchmove', handleTouchMove, eventOptions);
     toggleButton.addEventListener('click', toggleCursor);
 
     // Start animation loop
-    updateCursorPosition();
+    if (isCursorEnabled) {
+        updateCursorPosition();
+    }
 
     // Clean up on page unload
     window.addEventListener('beforeunload', function() {
         if (animationFrameId) {
             cancelAnimationFrame(animationFrameId);
         }
-        document.removeEventListener('mousemove', handleMouseMove);
-        document.removeEventListener('touchmove', handleTouchMove);
+        document.removeEventListener('mousemove', handleMouseMove, eventOptions);
+        document.removeEventListener('touchmove', handleTouchMove, eventOptions);
     });
 
     // Handle visibility change
@@ -121,4 +179,15 @@ document.addEventListener('DOMContentLoaded', function() {
             updateCursorPosition();
         }
     });
+
+    // Handle potential memory leaks in older IE
+    if (window.attachEvent) {
+        window.attachEvent('onunload', function() {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+            document.detachEvent('onmousemove', handleMouseMove);
+            document.detachEvent('ontouchmove', handleTouchMove);
+        });
+    }
 });
