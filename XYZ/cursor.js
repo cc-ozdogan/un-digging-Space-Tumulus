@@ -152,6 +152,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const eventOptions = passiveSupported ? { passive: true } : false;
 
+    // Function to clean up event listeners and animation
+    function cleanupCursor() {
+        if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+            animationFrameId = null;
+        }
+        document.removeEventListener('mousemove', handleMouseMove, eventOptions);
+        document.removeEventListener('touchmove', handleTouchMove, eventOptions);
+    }
+
+    // Add event listeners
     document.addEventListener('mousemove', handleMouseMove, eventOptions);
     document.addEventListener('touchmove', handleTouchMove, eventOptions);
     toggleButton.addEventListener('click', toggleCursor);
@@ -161,20 +172,14 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCursorPosition();
     }
 
-    // Clean up on page unload
-    window.addEventListener('beforeunload', function() {
-        if (animationFrameId) {
-            cancelAnimationFrame(animationFrameId);
-        }
-        document.removeEventListener('mousemove', handleMouseMove, eventOptions);
-        document.removeEventListener('touchmove', handleTouchMove, eventOptions);
-    });
+    // Clean up on page unload or navigation
+    window.addEventListener('beforeunload', cleanupCursor);
+    window.addEventListener('pagehide', cleanupCursor);
 
     // Handle visibility change
     document.addEventListener('visibilitychange', function() {
-        if (document.hidden && animationFrameId) {
-            cancelAnimationFrame(animationFrameId);
-            animationFrameId = null;
+        if (document.hidden) {
+            cleanupCursor();
         } else if (isCursorEnabled) {
             updateCursorPosition();
         }
@@ -182,12 +187,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Handle potential memory leaks in older IE
     if (window.attachEvent) {
-        window.attachEvent('onunload', function() {
-            if (animationFrameId) {
-                cancelAnimationFrame(animationFrameId);
-            }
-            document.detachEvent('onmousemove', handleMouseMove);
-            document.detachEvent('ontouchmove', handleTouchMove);
-        });
+        window.attachEvent('onunload', cleanupCursor);
     }
+
+    // Reinitialize cursor when coming back to the page
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) { // Page was loaded from cache
+            if (isCursorEnabled) {
+                // Reattach event listeners
+                document.addEventListener('mousemove', handleMouseMove, eventOptions);
+                document.addEventListener('touchmove', handleTouchMove, eventOptions);
+                updateCursorPosition();
+            }
+        }
+    });
 });
