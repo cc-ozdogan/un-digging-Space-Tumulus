@@ -3979,27 +3979,51 @@ left: 21%;
  }
 
  .cursor-toggle-btn {
+    font-family: 'Custom', sans-serif;
+    font-size: 111px;
+    color: white;  
+    background: none;
+    border: none;
+    cursor: pointer;
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 10000;
-    padding: 10px 15px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    animation: glow2 6s infinite alternate, pulse 1.5s infinite ease-in-out;
     transition: all 0.3s ease;
-    font-family: sans-serif;
-    font-size: 14px;
 }
 
 .cursor-toggle-btn:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 1);
+    transform: scale(1.1);
+}
+
+@keyframes glow2 {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .cursor-toggle-btn .toggle-icon {
