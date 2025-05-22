@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.createElement('button');
     toggleButton.id = 'cursor-toggle';
     toggleButton.className = 'cursor-toggle-btn';
-    toggleButton.innerHTML = '🖱️'; // Just the mouse icon
+    toggleButton.innerHTML = '🖱️';
     document.body.appendChild(toggleButton);
 
     // Load the CSS file
@@ -51,14 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentX = 0, currentY = 0;
     const easing = 0.15;
     let animationFrameId = null;
-    let isCursorEnabled = localStorage.getItem('cursorEnabled') !== 'false'; // Load from localStorage
-
-    // Apply initial state
-    if (!isCursorEnabled) {
-        customCursor.style.display = 'none';
-        toggleButton.textContent = '🚫'; // Prohibited icon
-        document.body.classList.add('custom-cursor-disabled');
-    }
+    let isCursorEnabled = localStorage.getItem('cursorEnabled') !== 'false';
+    let isPageActive = true;
 
     // Smooth linear interpolation
     function lerp(start, end, t) {
@@ -67,12 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Optimized position update
     function updateCursorPosition() {
-        if (!isCursorEnabled) return;
+        if (!isCursorEnabled || !isPageActive) return;
 
         currentX = lerp(currentX, targetX, easing);
         currentY = lerp(currentY, targetY, easing);
 
-        // Use your original positioning method to prevent offset
         customCursor.style.left = `${currentX}px`;
         customCursor.style.top = `${currentY}px`;
 
@@ -81,12 +74,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update target position
     function updateTargetPosition(x, y) {
-        if (!isCursorEnabled) return;
+        if (!isCursorEnabled || !isPageActive) return;
 
         targetX = x;
         targetY = y;
 
-        // Use your original positioning method to prevent offset
         customCursor.style.left = `${x}px`;
         customCursor.style.top = `${y}px`;
 
@@ -108,27 +100,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toggle cursor visibility
     function toggleCursor() {
         isCursorEnabled = !isCursorEnabled;
-
-        // Save state to localStorage
         localStorage.setItem('cursorEnabled', isCursorEnabled);
 
         if (isCursorEnabled) {
-            // Enable cursor
             customCursor.style.display = 'block';
-            toggleButton.textContent = '🖱️'; // Mouse icon
+            toggleButton.textContent = '🖱️';
             document.body.classList.remove('custom-cursor-disabled');
 
-            // Restart animation if needed
-            if (!animationFrameId) {
+            if (!animationFrameId && isPageActive) {
                 updateCursorPosition();
             }
         } else {
-            // Disable cursor
             customCursor.style.display = 'none';
-            toggleButton.textContent = '🚫'; // Prohibited icon
+            toggleButton.textContent = '🚫';
             document.body.classList.add('custom-cursor-disabled');
 
-            // Cancel animation frame
             if (animationFrameId) {
                 cancelAnimationFrame(animationFrameId);
                 animationFrameId = null;
@@ -152,8 +138,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const eventOptions = passiveSupported ? { passive: true } : false;
 
-    // Function to clean up event listeners and animation
+    // Function to clean up cursor
     function cleanupCursor() {
+        isPageActive = false;
         if (animationFrameId) {
             cancelAnimationFrame(animationFrameId);
             animationFrameId = null;
@@ -162,43 +149,84 @@ document.addEventListener('DOMContentLoaded', function() {
         document.removeEventListener('touchmove', handleTouchMove, eventOptions);
     }
 
+    // Function to initialize cursor
+    function initCursor() {
+        if (!isPageActive) {
+            isPageActive = true;
+
+            // Reset cursor position to current mouse position
+            const mouseEvent = new MouseEvent('mousemove', {
+                clientX: window.innerWidth / 2,
+                clientY: window.innerHeight / 2
+            });
+            handleMouseMove(mouseEvent);
+
+            // Reattach event listeners
+            document.addEventListener('mousemove', handleMouseMove, eventOptions);
+            document.addEventListener('touchmove', handleTouchMove, eventOptions);
+
+            // Force immediate update if cursor is enabled
+            if (isCursorEnabled) {
+                updateCursorPosition();
+            }
+        }
+    }
+
     // Add event listeners
     document.addEventListener('mousemove', handleMouseMove, eventOptions);
     document.addEventListener('touchmove', handleTouchMove, eventOptions);
     toggleButton.addEventListener('click', toggleCursor);
 
-    // Start animation loop
+    // Start animation loop if enabled
     if (isCursorEnabled) {
         updateCursorPosition();
     }
 
-    // Clean up on page unload or navigation
-    window.addEventListener('beforeunload', cleanupCursor);
-    window.addEventListener('pagehide', cleanupCursor);
-
-    // Handle visibility change
+    // Enhanced visibility handling
+    let visibilityTimeout;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
             cleanupCursor();
-        } else if (isCursorEnabled) {
-            updateCursorPosition();
+            clearTimeout(visibilityTimeout);
+        } else {
+            // Small delay to ensure page is fully visible
+            visibilityTimeout = setTimeout(initCursor, 50);
         }
     });
 
-    // Handle potential memory leaks in older IE
+    // Handle page show (including from cache)
+    window.addEventListener('pageshow', function() {
+        initCursor();
+    });
+
+    // Handle focus events
+    window.addEventListener('focus', function() {
+        setTimeout(initCursor, 50);
+    });
+
+    // Handle beforeunload
+    window.addEventListener('beforeunload', function() {
+        cleanupCursor();
+    });
+
+    // For older browsers
     if (window.attachEvent) {
         window.attachEvent('onunload', cleanupCursor);
+        window.attachEvent('onfocus', function() {
+            setTimeout(initCursor, 50);
+        });
     }
 
-    // Reinitialize cursor when coming back to the page
-    window.addEventListener('pageshow', function(event) {
-        if (event.persisted) { // Page was loaded from cache
-            if (isCursorEnabled) {
-                // Reattach event listeners
-                document.addEventListener('mousemove', handleMouseMove, eventOptions);
-                document.addEventListener('touchmove', handleTouchMove, eventOptions);
-                updateCursorPosition();
-            }
+    // Add CSS for smoother transitions
+    const style = document.createElement('style');
+    style.textContent = `
+        #cursor {
+            transition: transform 0.05s ease-out;
+            will-change: transform;
+            pointer-events: none;
+            z-index: 99999;
+            position: fixed;
         }
-    });
+    `;
+    document.head.appendChild(style);
 });
