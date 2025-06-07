@@ -1292,7 +1292,7 @@ overflow: auto;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    right: 8%;
+    right: 5%;
     top: 300px;
 }
 
@@ -1384,7 +1384,7 @@ overflow: auto;
     transition: opacity 2s ease-in-out;
    
     object-fit: contain;
-    transform: scale(2.4);
+    transform: scale(2);
     opacity: 0.8;
     border-radius: 20px 20px;
     box-shadow: -20px 10px 32px rgba(0, 0, 0, 0.7);
