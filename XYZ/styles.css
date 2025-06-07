@@ -3990,7 +3990,7 @@ left: 21%;
     right: 20px;
     z-index: 10000;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     animation: glow2 6s infinite alternate, pulse 1.5s infinite ease-in-out;
