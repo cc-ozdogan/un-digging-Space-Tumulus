@@ -31,14 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add the container to our list of toggleable elements
         return container;
     }
-    
+        
     // Process all ASCII containers on the page
     const asciiContainers = [
         processAsciiContainer('asc4'),
         processAsciiContainer('asc5'),
         processAsciiContainer('asc6'),
         processAsciiContainer('asc7'),
-        processAsciiContainer('asc8')
+        processAsciiContainer('asc8'),
+        processAsciiContainer('asc9')
         // Add more container IDs as needed
     ].filter(Boolean); // Remove any undefined/null values
     
