@@ -4038,6 +4038,10 @@ left: 21%;
     color: #ccc;
 }
 
+.lg-backdrop {
+    opacity: 0.95 !important; /* 70% opacity */
+}
+
 * When custom cursor is disabled */
 body.custom-cursor-disabled {
     cursor: auto !important;
