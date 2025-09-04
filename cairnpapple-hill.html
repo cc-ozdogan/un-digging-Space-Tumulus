@@ -8,6 +8,18 @@
     <meta name="keywords" content="keywords, for, your, page">
     <meta name="author" content="CC">
     <title>Cairnpapple Hill</title>
+    <meta name="description" content="Space Tumulus is a handmade website that operates as multisensorial field notes, where themes of queer ecology and archaeology and art-based field research intersect and coexist.">
+        <meta name="author" content="cc özdoğan">
+        <meta name="creator" content="cc özdoğan, Ambroise Leclerc">
+        <meta name="developer" content="cc özdoğan, Ambroise Leclerc">
+        <link rel="author" href="https://www.cevahirozdogan.net/">
+        <link rel="developer" href="https://paradaxperiod.42web.io/">
+        <meta property="og:image" content="./IMG/ST.jpg">
+        <meta property="og:image:width" content="1920">
+        <meta property="og:image:height" content="887">
+        <meta property="og:image:type" content="image/jpg">
+        <meta property="og:image:alt" content="Un/digging Space Tumulus: Multi-Sensory Field
+        Notes on Queer Nature Embodiment">
     <link rel="stylesheet" href="./XYZ/styles.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -247,22 +259,21 @@ i walked around the tumulus multiple times +         +                          
  
   
 
-
-  <script>
-       function playVideo() {
+<script>
+function playVideo() {
     const thumbnail = document.querySelector('.video-thumbnail');
     const iframe = document.getElementById('video-iframe');
-
     thumbnail.classList.add('fade-out');
-
     setTimeout(() => {
         thumbnail.style.display = 'none';
         iframe.style.display = 'block';
-        // Updated to include loop parameters when autoplaying
-        iframe.src = "https://www.youtube.com/embed/lwmDkwV3Z0M?modestbranding=1&controls=0&rel=0&showinfo=0&autoplay=1&loop=1&playlist=lwmDkwV3Z0M";
+        // Added parameters to minimize YouTube UI elements
+        iframe.src = "https://www.youtube.com/embed/lwmDkwV3Z0M?modestbranding=1&controls=0&rel=0&showinfo=0&autoplay=1&loop=1&playlist=lwmDkwV3Z0M&mute=0&disablekb=1&fs=0&iv_load_policy=3";
     }, 1500);
 }
-    </script>
+</script>
+  
+ 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
